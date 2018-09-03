@@ -1,0 +1,34 @@
+.thing .title a.title{
+    color: #7399FA!important;
+}
+.thing .title a.title:visited {
+    color: #626262!important;
+}
+
+.thing .RES-keyNav-activeElement .title a.title {
+    color: #73CCFA!important;
+}
+
+.thing .RES-keyNav-activeElement .title a.title:visited {
+    color: #787878!important;
+}
+
+.stickied .title a.title{
+    color: green!important;
+}
+
+.stickied .RES-keyNav-activeElement .title a.title {
+    color: green!important;
+}
+
+.stickied .title a.title:visited {
+    color: #626262!important;
+}
+
+.stickied .RES-keyNav-activeElement .title a.title:visited {
+    color: #787878!important;
+}
+
+#chat {
+   display:none!important;
+}

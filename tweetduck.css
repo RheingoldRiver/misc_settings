@@ -1,0 +1,10 @@
+.avatar { border-radius: 0 !important }
+
+.compose-text {
+  font-size: 12px !important;
+  height: 120px !important
+}
+
+.js-progress-svg { display: none !important }
+
+.avatar[src$=".gif"] { visibility: hidden }

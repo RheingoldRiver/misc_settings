@@ -8,3 +8,22 @@
 .js-progress-svg { display: none !important }
 
 .avatar[src$=".gif"] { visibility: hidden }
+
+#tduck .compose-text { font-size: 12px !important; height: 120px !important }
+
+html.dark .app-search-fake{border-color:transparent!important}
+
+textarea, .compose-text-container, .js-compose-message-account {
+  color: #B1B7BC!important;
+  background-color: #222426!important;
+  border-right:none!important;
+}
+
+.js-in-reply-to {
+  color:#B1B7BC!important;
+  background-color:#292F33!important;
+}
+
+.js-in-reply-to .icon-close {
+  color:#B1B7BC!important;
+}

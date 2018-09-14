@@ -29,6 +29,6 @@
     color: #787878!important;
 }
 
-#chat {
+#chat, #chat-count {
    display:none!important;
 }

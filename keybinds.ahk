@@ -48,6 +48,7 @@ return
 ![::Send ^{PgUp}
 LWin::LButton
 ^d::return
++^Q::Return
 #IfWinActive Replace
 +!Q::Send {^}\s*(.*)$\r\n.*$\r\n\s*\d{,}?\d* (KB|byt).*${Tab}$1{Tab}a
 #IfWinActive Notepad++

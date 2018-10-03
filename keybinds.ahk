@@ -16,9 +16,7 @@ End::PgDn
     Clipboard := oCB
     Reload
 return
-^!+x::RunWait % "C:\Windows\nircmd.exe" . " muteappvolume firefox.exe 2" ; 2 
-
-switchs between mute and unmute.
+^!+x::RunWait % "C:\Windows\nircmd.exe" . " muteappvolume firefox.exe 2"
 #IfWinActive Discord
 ^+q:: Send, <^v>
 #IfWinActive Wiki - Mozilla Firefox
@@ -39,11 +37,10 @@ switchs between mute and unmute.
 return
 ^`::
     oCB := ClipboardAll
-    ClipBoard :=
-    FileRead, Clipboard, S:\System\Documents\tab.txt	
-    ClipWait
+    ClipBoard := "	"
     Send ^v
     Clipboard := oCB
+    oCB =
     Reload
 return
 #IfWinActive Firefox

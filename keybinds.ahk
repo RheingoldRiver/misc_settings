@@ -16,6 +16,9 @@ End::PgDn
     Clipboard := oCB
     Reload
 return
+^!+x::RunWait % "C:\Windows\nircmd.exe" . " muteappvolume firefox.exe 2" ; 2 
+
+switchs between mute and unmute.
 #IfWinActive Discord
 ^+q:: Send, <^v>
 #IfWinActive Wiki - Mozilla Firefox

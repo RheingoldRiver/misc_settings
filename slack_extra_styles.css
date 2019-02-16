@@ -40,3 +40,7 @@
 .c-scrollbar__hider {
     background-color:black;
 }
+
+.p-channel_sidebar__list {
+    border-left: #1F1F1F solid 1px;
+}

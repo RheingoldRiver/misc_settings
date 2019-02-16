@@ -36,3 +36,7 @@
 .c-pillow_file_container {
     border-color:black!important;
 }
+
+.c-scrollbar__hider {
+    background-color:black;
+}

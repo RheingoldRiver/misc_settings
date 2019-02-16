@@ -1,0 +1,8 @@
+.p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted)::before {
+  color:#61AF28!important;
+}
+
+.p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted) span {
+  color:#61AF28!important;
+  font-weight:bold!important;
+}

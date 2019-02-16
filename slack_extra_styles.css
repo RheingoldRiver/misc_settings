@@ -28,3 +28,11 @@
 .p-downloads_list__shift_hint {
     background: #1F1F1F;
 }
+
+.p-file_list__file_type_select .c-input_select__selected_value--placeholder {
+    color:white;
+}
+
+.c-pillow_file_container {
+    border-color:black!important;
+}

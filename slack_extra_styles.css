@@ -44,3 +44,7 @@
 .p-channel_sidebar__list {
     border-left: #1F1F1F solid 1px;
 }
+
+#unread_msgs_div ts-message:hover {
+ background:black;
+}

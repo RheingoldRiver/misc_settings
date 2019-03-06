@@ -48,3 +48,15 @@
 #unread_msgs_div ts-message:hover {
  background:black;
 }
+
+.c-pillow_file__post {
+    border-top:black;
+}
+
+.c-pillow_file {
+    background-color:black;
+}
+
+.c-pillow_file__content--collapsed::after {
+    background:linear-gradient(0deg,black,hsla(0,0%,100%,0) 40px)!important;
+}

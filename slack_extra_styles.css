@@ -49,6 +49,7 @@
  background:black;
 }
 
+/* fix some snippets having white bg */
 .c-pillow_file__post {
     border-top:black;
 }
@@ -59,4 +60,10 @@
 
 .c-pillow_file__content--collapsed::after {
     background:linear-gradient(0deg,black,hsla(0,0%,100%,0) 40px)!important;
+}
+
+
+/* fix for gdoc spreadsheets having bright white bg images, but might not be totally desirable */
+.c-pillow_file__preview {
+    background-image:none!important;
 }

@@ -67,3 +67,7 @@
 .c-pillow_file__preview {
     background-image:none!important;
 }
+
+.member_title {
+	background-color: rgba(0,0,0,0.8);
+}

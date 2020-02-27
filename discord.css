@@ -1,3 +1,4 @@
+
 .unread-1xRYoj { display: none; }
 
 .item-2J1YMK {
@@ -7,3 +8,65 @@
 }
 
 #bd-customcss-editor { font-size:100%!important;}
+
+.buttonWrapper-Bm5QAU {
+    display:none;
+}
+
+.scrollbarGhostHairline-1mSOM1::-webkit-scrollbar-thumb {
+    background:transparent;
+}
+
+/* Gift & Gif */
+.button-3AYNKb {
+    display:none;
+}
+
+/*
+.nameUnreadText-DfkrI4 {
+    color:#9ED72D;
+}*/
+
+.embed-IeVjo6 {
+    max-width:700px;
+}
+
+/* hide shitty useless ui shit in friends list */
+a.channel-2QD9_O.da-channel.container-2Pjhx-.da-container.clickable-1JJAn8.da-clickable[href="/channels/@me"],
+a.channel-2QD9_O.da-channel.container-2Pjhx-.da-container.clickable-1JJAn8.da-clickable[href="/store"] {
+    display: none;
+}
+
+/* hide shitty useless reaction default emojis */
+.emojiButton-jE9tXC {
+    display: none;
+}
+.container-3npvBV:hover .emojiButton-jE9tXC {
+    display: block;
+}
+.container-3npvBV .wrapper-2aW0bm.da-wrapper {
+    background-color:rgba(54, 57, 63, .3);
+}
+.container-3npvBV:hover .wrapper-2aW0bm.da-wrapper {
+    opacity:1;
+    background-color:rgb(54, 57, 63);
+}
+/* reposition context menu so it's not stupidly above the message */
+.container-3npvBV { position:unset; }
+
+/* fix spacing between messages */
+.group-spacing-0 .groupStart-23k01U {
+    margin-top:.3rem!important;
+}
+
+.message-2qnXI6,
+.container-3FojY8.da-container {
+    padding-top:0;
+    padding-bottom:0;
+}
+
+/* fix spacing around day change */
+.hasContent-1_DUdQ {
+    margin-top:1rem;
+    margin-bottom:.3rem!important;
+}

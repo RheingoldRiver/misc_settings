@@ -1,40 +1,35 @@
 SetTitleMatchMode 2
 PgDn::End
 End::PgDn
+Pause::Send,{Insert}
 ^!c::Run, Calc.exe
 ^!n::Run, Notepad.exe
 ^!a::Run, mspaint.exe
 ^!l::Run, explore S:\
 ^!+l::Run, explore D:\
+^!+p::Run, control
 ^!m::Run, explore D:\Media
-^!+d::
-    oCB := ClipboardAll
-    ClipBoard :=
-    FileRead, Clipboard, S:\System\Documents\DiscordURL.txt	
-    ClipWait
-    Send ^v
-    Clipboard := oCB
-    Reload
+!]::Send ^{PgDn}
+![::Send ^{PgUp}
+^!+d:: Send, https://discord.gg/6SNQ4c6
 return
 ^!+x::RunWait % "C:\Windows\nircmd.exe" . " muteappvolume firefox.exe 2"
 #IfWinActive Discord
 ^+q:: Send, <^v>
+^!+f::
+Loop, Parse, Clipboard, `n, `r
+{
+	Send, %A_LoopField%
+	Send, {Enter}
+	Sleep, 500
+}
+return
 #IfWinActive Wiki - Mozilla Firefox
 ^s::Send !+s
 ^e::Send !+e
 ^p::Send !+p
 ^q::Send !+u
 !+c::Send !+1 ; for view page values hotkey
-^!+I:: ; edit interwiki data in firefox
-    Send ^l^c
-    x = %Clipboard%
-    while x <> "https://google.com/"{
-        Send editiw{enter}
-        Sleep,5000
-        Send ^l^c
-        x = %Clipboard%
-    }
-return
 ^`::
     oCB := ClipboardAll
     ClipBoard := "	"
@@ -44,13 +39,9 @@ return
     Reload
 return
 #IfWinActive Firefox
-!]::Send ^{PgDn}
-![::Send ^{PgUp}
 LWin::LButton
 ^d::return
 +^Q::Return
-#IfWinActive Replace
-+!Q::Send {^}\s*(.*)$\r\n.*$\r\n\s*\d{,}?\d* (KB|byt).*${Tab}$1{Tab}a
 #IfWinActive Notepad++
 ^l::Send !LL{Up}{Enter}
 ^p::Send !LN{up}{Up}{Enter}
@@ -59,4 +50,6 @@ LWin::LButton
 ![::Send ^{PgUp}
 #IfWinActive Replace Special
 ^Z::return
+#IfWinActive Excel
++Space::return
 #IfWinActive

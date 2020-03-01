@@ -13,7 +13,11 @@ Pause::Send,{Insert}
 ![::Send ^{PgUp}
 ^!+d:: Send, https://discord.gg/6SNQ4c6
 return
-^!+x::RunWait % "C:\Windows\nircmd.exe" . " muteappvolume firefox.exe 2"
+^!+x::
+ WinActivate,Alternate Player
+ Send, ^m
+ Send, !{tab}
+ return
 #IfWinActive Discord
 ^+q:: Send, <^v>
 ^!+f::
@@ -30,14 +34,6 @@ return
 ^p::Send !+p
 ^q::Send !+u
 !+c::Send !+1 ; for view page values hotkey
-^`::
-    oCB := ClipboardAll
-    ClipBoard := "	"
-    Send ^v
-    Clipboard := oCB
-    oCB =
-    Reload
-return
 #IfWinActive Firefox
 LWin::LButton
 ^d::return

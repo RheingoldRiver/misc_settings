@@ -3,7 +3,7 @@ PgDn::End
 End::PgDn
 Pause::Send,{Insert}
 ^!c::Run, Calc.exe
-^!n::Run, Notepad.exe
+^!n::Run, S:\System\blacknotepad.exe
 ^!a::Run, mspaint.exe
 ^!l::Run, explore S:\
 ^!+l::Run, explore D:\
@@ -14,10 +14,10 @@ Pause::Send,{Insert}
 ^!+d:: Send, https://discord.gg/6SNQ4c6
 return
 ^!+x::
- WinActivate,Alternate Player
- Send, ^m
- Send, !{tab}
- return
+    IfWinNotExist ahk_class MozillaWindowClass
+		return
+    ControlSend,ahk_parent, ^+O
+	return
 #IfWinActive Discord
 ^+q:: Send, <^v>
 ^!+f::
@@ -48,4 +48,6 @@ LWin::LButton
 ^Z::return
 #IfWinActive Excel
 +Space::return
+#IfWinActive AutoWikiBrowser
+^X::^I
 #IfWinActive

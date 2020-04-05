@@ -14,6 +14,11 @@ Pause::Send,{Insert}
 ^!+d:: Send, https://discord.gg/6SNQ4c6
 return
 ^!+x::
+	IfWinActive ahk_class MozillaWindowClass
+	{
+		Send, ^+O
+		return
+	}
     IfWinNotExist ahk_class MozillaWindowClass
 		return
     ControlSend,ahk_parent, ^+O

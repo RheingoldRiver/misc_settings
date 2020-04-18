@@ -19,9 +19,9 @@ return
 		Send, ^+O
 		return
 	}
-    IfWinNotExist ahk_class MozillaWindowClass
+	IfWinNotExist ahk_class MozillaWindowClass
 		return
-    ControlSend,ahk_parent, ^+O
+	ControlSend,ahk_parent, ^+O
 	return
 #IfWinActive Discord
 ^+q:: Send, <^v>

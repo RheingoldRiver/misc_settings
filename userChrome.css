@@ -294,7 +294,7 @@ screen and (-moz-os-version:windows-win10) {
     margin-right: 0!important
   }
 }
-@-moz-document url(chrome://browser/content/places/places.xul) {
+@-moz-document url(chrome://browser/content/places/places.xhtml) {
   toolbar {
     -moz-appearance: none!important;
     background-color: var(--in-content-category-header-background)!important;
@@ -485,10 +485,10 @@ url-prefix(chrome://browser) {
 }
 @-moz-document url-prefix(about:),
 url-prefix(chrome://browser/content/preferences/),
-url(chrome://passwordmgr/content/passwordManager.xul),
+url(chrome://passwordmgr/content/passwordManager.xhtml),
 url(chrome://formautofill/content/manageAddresses.xhtml),
 url-prefix(chrome://pippki),
-url(chrome://browser/content/pageinfo/pageInfo.xul) {
+url(chrome://browser/content/pageinfo/pageInfo.xhtml) {
   ::-moz-tree-row(selected) {
     -moz-appearance: none!important;
     background-color: red!important
@@ -547,7 +547,7 @@ url(chrome://browser/content/pageinfo/pageInfo.xul) {
     }
   }
 }
-@-moz-document url(chrome://browser/content/aboutDialog.xul) {
+@-moz-document url(chrome://browser/content/aboutDialog.xhtml) {
   #clientBox {
     color: var(--in-content-page-color)!important;
     background-color: var(--in-content-page-background)!important
@@ -690,8 +690,8 @@ listitem[selected=true] {
   border-color: var(--in-content-box-border-color)!important;
   box-shadow: none!important
 }
-@-moz-document url(chrome://browser/content/places/bookmarkProperties.xul),
-url(chrome://browser/content/places/bookmarkProperties2.xul) {
+@-moz-document url(chrome://browser/content/places/bookmarkProperties.xhtml),
+url(chrome://browser/content/places/bookmarkProperties2.xhtml) {
   #bookmarkproperties {
     -moz-appearance: none!important;
     color: var(--in-content-page-color)!important;
@@ -743,7 +743,7 @@ url(chrome://browser/content/places/bookmarkProperties2.xul) {
     background: 0 0!important
   }
 }
-@-moz-document url(chrome://browser/content/sanitize.xul) {
+@-moz-document url(chrome://browser/content/sanitize.xhtml) {
   #SanitizeDialog {
     -moz-appearance: none!important;
     background: var(--in-content-category-header-background)!important;
@@ -766,7 +766,7 @@ url(chrome://browser/content/places/bookmarkProperties2.xul) {
     background-color: var(--in-content-box-background)!important
   }
 }
-@-moz-document url("chrome://global/content/commonDialog.xul") {
+@-moz-document url("chrome://global/content/commonDialog.xhtml") {
   #commonDialog {
     -moz-appearance: none!important;
     background: var(--in-content-page-background)!important;
@@ -943,7 +943,7 @@ toolbarseparator {
   background: var(--in-content-link-color);
   color: var(--in-content-selected-text)!important
 }
-@-moz-document url(chrome://browser/content/pageinfo/pageInfo.xul) {
+@-moz-document url(chrome://browser/content/pageinfo/pageInfo.xhtml) {
   #topBar {
     -moz-appearance: none!important;
     background: var(--in-content-category-header-background)!important
@@ -1075,7 +1075,7 @@ toolbarseparator {
     }
   }
 }
-@-moz-document url-prefix(chrome://browser/content/preferences/cookies.xul) {
+@-moz-document url-prefix(chrome://browser/content/preferences/cookies.xhtml) {
   #CookiesDialog {
     -moz-appearance: none!important;
     background-color: var(--in-content-page-background)!important
@@ -1287,7 +1287,7 @@ hbox#sidebar-search-container textbox#search-box {
     background-color: var(--theme-selection-background)!important
   }
 }
-@-moz-document url(chrome://browser/content/places/bookmarksSidebar.xul) {
+@-moz-document url(chrome://browser/content/places/bookmarksSidebar.xhtml) {
   @media screen and (-moz-os-version:windows-win7) {
     treechildren {
       --treechildren-outline: none!important
@@ -1438,7 +1438,7 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 	display:block;
 }
 #main-menubar{margin-left:150px;pointer-events: auto}
-#ublock0_raymondhill_net-browser-action{margin-right:150px!important} /* change this if adding or removing menu bar items */
+#nav-bar-customization-target > toolbarbutton:nth-of-type(4) {margin-right:150px!important} /* change this if adding or removing menu bar items */
 /* End move URL bar */
 
 /* Change back/forward icons */
@@ -1486,7 +1486,8 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 	z-index: 10;
 	padding-block: 3px !important;
   padding-inline: 0px !important;
-  margin-inline: 5px !important;
+  margin-right: 5px !important;
+  margin-left: 0px !important;
 }
 #nav-bar-customization-target{ overflow: visible !important }
 #urlbar-results{ max-width: 100% !important; }

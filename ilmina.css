@@ -1,0 +1,123 @@
+body {
+    background-color:#222222;
+}
+
+.mx-auto:first-of-type > div:not(.search-box) {
+    display:none;
+}
+
+body {
+    padding-top:10px;
+}
+
+/* card page display */
+
+.card-picture-container {
+    background-image:none;
+    height:200px;
+}
+
+.card-type-container {
+    position:relative;
+}
+
+.card-super-awakenings {
+    width:auto;
+    display:flex;
+    position:initial;
+    
+}
+
+.card-awakenings {
+    display:flex;
+    width:auto;
+    position:initial;
+}
+
+.card-align-helper {
+    display:none;
+}
+
+.card-awakening {
+    z-index:100;
+}
+
+.all-awakenings {
+    display:flex;
+    flex-direction:column-reverse;
+}
+
+.card-align-helper-nobottom {
+    display:none;
+}
+
+/* remove awakening intro text */
+.adv-search-toplevel > .adv-search-option:nth-of-type(4) div:first-of-type {
+    display:none;
+}
+
+.adv-search-toplevel > .adv-search-option:nth-of-type(4) br {
+    display:none;
+}
+
+/* always show card stats search */
+.adv-search-option:nth-of-type(7) > label,
+.adv-search-option:nth-of-type(7) > label + br {
+    /*display:none;*/
+}
+
+/* Grid for main search */
+
+.adv-search-toplevel {
+  display: grid;
+    grid-template-rows:3;
+    grid-template-columns:3;
+}
+
+.adv-search-option:nth-of-type(3n) {
+    grid-column-start:2;
+    grid-column-end:2;
+}
+
+.adv-search-option:nth-of-type(3n+1) {
+    grid-column-start:3;
+    grid-column-end:3;
+}
+
+.adv-search-option:first-of-type, .adv-search-option:nth-of-type(3n+2) {
+    grid-column-start:1;
+    grid-column-end:1;
+}
+
+.adv-search-option:nth-of-type(4) {
+    grid-row-start:2;
+}
+
+.adv-search-option:nth-of-type(7) {
+    grid-row-start:1;
+}
+
+div[data-bind="visible: queryModel.statsExpanded()==true"] {
+    display:block!important;
+}
+
+/* search results flex */
+
+.mx-auto:not(:first-of-type) {
+    width:100%!important;
+    max-width:100%!important;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+
+.mx-auto:not(:first-of-type) > div {
+    border: solid 1px white;
+    flex-basis:auto;
+    flex-grow:1;
+}
+
+.card-title.mx-auto {
+    width:540px!important;
+}

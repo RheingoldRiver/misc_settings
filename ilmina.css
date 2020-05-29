@@ -52,49 +52,119 @@ body {
 }
 
 /* remove awakening intro text */
-.adv-search-toplevel > .adv-search-option:nth-of-type(4) div:first-of-type {
+.adv-search-toplevel > .adv-search-option:nth-of-type(5) div:first-of-type {
     display:none;
 }
 
-.adv-search-toplevel > .adv-search-option:nth-of-type(4) br {
+.adv-search-toplevel > .adv-search-option:nth-of-type(5) br {
     display:none;
 }
 
-/* always show card stats search */
+div.card-playerskill + div + div + div.card-playerskill + div {
+    background-color:#D0CD81;
+}
+
+/* always show card stats search 
 .adv-search-option:nth-of-type(7) > label,
 .adv-search-option:nth-of-type(7) > label + br {
-    /*display:none;*/
-}
+    /*display:none;
+} */
 
 /* Grid for main search */
 
 .adv-search-toplevel {
   display: grid;
-    grid-template-rows:3;
+    grid-template-rows:5;
     grid-template-columns:3;
 }
 
-.adv-search-option:nth-of-type(3n) {
-    grid-column-start:2;
-    grid-column-end:2;
+/* Unsplit attr */
+.adv-search-toplevel > .adv-search-option:nth-of-type(1) {
+	order: 1;
+	grid-row:1 / 3;
+	grid-column:1;
 }
 
-.adv-search-option:nth-of-type(3n+1) {
-    grid-column-start:3;
-    grid-column-end:3;
+/* Split attr */
+.adv-search-toplevel > .adv-search-option:nth-of-type(2) {
+	order: 1;
+	grid-row:1 / 3;
+	grid-column:1;
 }
 
-.adv-search-option:first-of-type, .adv-search-option:nth-of-type(3n+2) {
-    grid-column-start:1;
-    grid-column-end:1;
+/* Required types */
+.adv-search-toplevel > .adv-search-option:nth-of-type(3) {
+	order: 2;
+	grid-row:1 / 2;
+	grid-column:2;
 }
 
-.adv-search-option:nth-of-type(4) {
-    grid-row-start:2;
+/* Not these types (toggle to show) */
+.adv-search-toplevel > .adv-search-option:nth-of-type(4) {
+	order: 3;
+    grid-row: 2 / 3;
+    grid-column:2;
 }
 
-.adv-search-option:nth-of-type(7) {
-    grid-row-start:1;
+/* Awakenings - order is changed!! */
+.adv-search-toplevel > .adv-search-option:nth-of-type(5) {
+	order: 7;
+    grid-row:3;
+}
+
+/* active skill */
+.adv-search-toplevel > .adv-search-option:nth-of-type(6) {
+	order: 5;
+    grid-row:3;
+}
+
+/* leader skill */
+.adv-search-toplevel > .adv-search-option:nth-of-type(7) {
+	order: 6;
+    grid-row:3;
+}
+
+/* card stats - order is changed!! */
+.adv-search-toplevel > .adv-search-option:nth-of-type(8) {
+	order: 4;
+    grid-row:1 / 3;
+    grid-column:3;
+}
+
+.adv-search-toplevel > .adv-search-option:nth-of-type(9) {
+	order: 8;
+    grid-row:4;
+}
+
+.adv-search-toplevel > .adv-search-option:nth-of-type(10) {
+	order: 9;
+    grid-row:4;
+}
+
+.adv-search-toplevel > .adv-search-option:nth-of-type(11) {
+	order: 10;
+    grid-row:4;
+}
+
+.adv-search-toplevel > .adv-search-option:nth-of-type(12) {
+	order: 11;
+    grid-row:5;
+}
+
+.adv-search-toplevel > .adv-search-option:nth-of-type(13) {
+	order: 12;
+    grid-row:5;
+}
+
+.adv-search-toplevel > .adv-search-option:nth-of-type(14) {
+	order: 13;
+    grid-row:5;
+}
+
+/* this doesn't actually exist */
+.adv-search-toplevel > .adv-search-option:nth-of-type(15) {
+	order: 14;
+    grid-row:6;
 }
 
 div[data-bind="visible: queryModel.statsExpanded()==true"] {

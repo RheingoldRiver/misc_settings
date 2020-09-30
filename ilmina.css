@@ -191,3 +191,12 @@ div[data-bind="visible: queryModel.statsExpanded()==true"] {
 .card-title.mx-auto {
     width:540px!important;
 }
+
+advanced-search card-icon a::after {
+  content:attr(title);
+  display:block;
+  color:white;
+  position:absolute;
+  top:95;
+  width:400px;
+}

@@ -38,6 +38,10 @@ body {
     display:none;
 }
 
+div[data-bind="html: getActiveSkillDescription()"] {
+    background-color:#D0CD81;
+}
+
 .card-awakening {
     z-index:100;
 }

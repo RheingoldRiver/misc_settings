@@ -31,8 +31,13 @@
     max-width:700px;
 }
 
+/* make emojis in embeds huge */
+.embed-IeVjo6 .emoji {
+    width:30px!important;
+    height:30px!important;
+}
+
 /* hide shitty useless ui shit in friends list */
-a.channel-2QD9_O.da-channel.container-2Pjhx-.da-container.clickable-1JJAn8.da-clickable[href="/channels/@me"],
 a.channel-2QD9_O.da-channel.container-2Pjhx-.da-container.clickable-1JJAn8.da-clickable[href="/store"] {
     display: none;
 }
@@ -59,14 +64,21 @@ a.channel-2QD9_O.da-channel.container-2Pjhx-.da-container.clickable-1JJAn8.da-cl
     margin-top:.3rem!important;
 }
 
+.da-compact,
 .message-2qnXI6,
 .container-3FojY8.da-container {
-    padding-top:0;
-    padding-bottom:0;
+    padding-top:0!important;
+    padding-bottom:0!important;
 }
 
 /* fix spacing around day change */
 .hasContent-1_DUdQ {
     margin-top:1rem;
     margin-bottom:.3rem!important;
+}
+
+/* increase width on code embeds */
+
+.markup-2BOw-j pre {
+ max-width:100%!important;
 }

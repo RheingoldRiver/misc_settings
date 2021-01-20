@@ -39,7 +39,7 @@ body {
 }
 
 div[data-bind="html: getActiveSkillDescription()"] {
-    background-color:#D0CD81;
+    background-color:#B1AAA0;
 }
 
 .card-awakening {

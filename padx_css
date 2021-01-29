@@ -1,0 +1,140 @@
+.finalawokenevolve .absolute .onload,
+.finalevolve .absolute .onload,
+.require .absolute .onload {
+  background-image:none!important;
+    box-sizing:border-box;
+    padding-top:98px;
+    height:98px;
+}
+
+.finalawokenevolve .absolute .onload,
+.finalevolve .absolute .onload,
+.require .relative {
+    overflow:hidden;
+}
+
+.finalawokenevolve .absolute,
+.finalevolve .absolute {
+    height:100%;
+    overflow:hidden;
+}
+
+.dmgAttack,
+#right,
+#main,
+body {
+    background-image:none;
+    background:#2A2A2E;
+}
+
+/* hide discord server notice */
+.notice-box {
+    display:none;
+}
+
+div[style="width: 800px;"] {
+    display:none!important;
+}
+
+/* ads */
+#leaderboard, #leaderboard1, #leaderboard2, #leaderboard3, #mrectangle, #mrectangle2, #mrectangle3 {
+    display:none;
+}
+
+/* end ads */
+
+#comparebars {
+    display:none;
+}
+
+#expControls {
+    display:none;
+}
+
+#monsterlogo {
+    display:none;
+}
+
+#location {
+    top:120px;
+    background-color:black;
+}
+
+#searchterm,
+.name {
+    background-color:black;
+}
+
+#searchterm {
+    height:unset;
+    top:60px;
+}
+
+#history {
+    display:none;
+}
+
+#content {
+    margin-top:180px;
+}
+
+#menutab {
+    top:75px;
+}
+
+#link {
+    top:85px;
+    margin-left:0;
+}
+
+#frame {
+    top:70px;
+}
+
+#monster {
+    top:80px;
+}
+
+#monstertype,#monsterelement1, #monsterelement2 {
+    top:85px;
+}
+
+#topbar {
+    display:none;
+}
+
+#report, #facebook {
+    display:none;
+}
+
+#dragon, #claw, #wing {
+    display:none;
+}
+
+
+#searchweb {
+    position:absolute;
+    top:0;
+    right:355px;
+}
+
+#header {
+    position:absolute;
+    left:-50px;
+}
+
+.update {
+    margin-left:0!important;
+    float:left;
+    width:auto!important;
+}
+
+#top {display:none;}
+
+.stars img:nth-of-type(5n+1) {
+    margin-left:10px;
+}
+
+.stars img:first-of-type {
+    margin-left:0;
+}

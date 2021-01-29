@@ -57,17 +57,12 @@ div[style="width: 800px;"] {
 
 #location {
     top:120px;
-    background-color:black;
-}
-
-#searchterm,
-.name {
-    background-color:black;
 }
 
 #searchterm {
     height:unset;
     top:60px;
+    z-index:999;
 }
 
 #history {
@@ -89,10 +84,11 @@ div[style="width: 800px;"] {
 
 #frame {
     top:70px;
+    display:none;
 }
 
 #monster {
-    top:80px;
+    top:75px;
 }
 
 #monstertype,#monsterelement1, #monsterelement2 {
@@ -130,6 +126,10 @@ div[style="width: 800px;"] {
 }
 
 #top {display:none;}
+
+.stars {
+    max-width:unset;
+}
 
 .stars img:nth-of-type(5n+1) {
     margin-left:10px;

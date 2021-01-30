@@ -158,8 +158,12 @@ div[style="width: 800px;"] {
 }
 
 .titlebar1 h2 {
+    width:100%;
     font-size:20px;
-    background-color:red;
+}
+
+#tablestat {
+    width: 100%;
 }
 
 /* some link on the front page */
@@ -182,6 +186,7 @@ span.bossHp + div {
     visibility:hidden;
 }
 
+/* this file doesn't exist */
 img[src="img/element/70.png"] {
     display:none;
 }

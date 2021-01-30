@@ -37,17 +37,13 @@ div[style="width: 800px;"] {
 }
 
 /* ads */
-#leaderboard, #leaderboard1, #leaderboard2, #leaderboard3, #mrectangle, #mrectangle2, #mrectangle3 {
+#leaderboard, #leaderboard1, #leaderboard2, #leaderboard3, #mrectangle, #mrectangle2, #mrectangle3, #skyscraper1, #skyscraper2 {
     display:none;
 }
 
 /* end ads */
 
-#comparebars {
-    display:none;
-}
-
-#expControls {
+#comparebars, #expControls {
     display:none;
 }
 
@@ -56,13 +52,17 @@ div[style="width: 800px;"] {
 }
 
 #location {
-    top:120px;
+    top:140px;
 }
 
 #searchterm {
-    height:unset;
-    top:60px;
+    height:40px;
+    top:55px;
     z-index:999;
+    margin-left:0;
+    width:inherit;
+    word-wrap:normal;
+    white-space:normal;
 }
 
 #history {
@@ -74,11 +74,11 @@ div[style="width: 800px;"] {
 }
 
 #menutab {
-    top:75px;
+    top:85px;
 }
 
 #link {
-    top:85px;
+    top:95px;
     margin-left:0;
 }
 
@@ -88,10 +88,14 @@ div[style="width: 800px;"] {
 }
 
 #monster {
+    margin-left:0;
     top:75px;
+    right:420px;
 }
 
+/* these have some ungodly combination of margin-left & position:left atm and I don't even want to think about it good god */
 #monstertype,#monsterelement1, #monsterelement2 {
+    left:460px;
     top:85px;
 }
 
@@ -125,7 +129,7 @@ div[style="width: 800px;"] {
     width:auto!important;
 }
 
-#top {display:none;}
+#top {visibility:hidden;}
 
 .stars {
     max-width:unset;
@@ -137,4 +141,55 @@ div[style="width: 800px;"] {
 
 .stars img:first-of-type {
     margin-left:0;
+}
+
+.titlebar1 {
+    background-image:none;
+    min-width:unset!important;
+    padding-right:0;
+    padding-left:0;
+}
+
+.column,
+.titlebar1 .element,
+.titlebar1 .elementborder,
+.titlebar1 .top {
+    display:none;
+}
+
+.titlebar1 h2 {
+    font-size:20px;
+    background-color:red;
+}
+
+/* some link on the front page */
+.titlebar1 .setting {
+    display:none;
+}
+
+#c,
+#c + #tablestat {
+    display:none;
+}
+
+#growth,
+#growth + table {
+    display:none;
+}
+
+/* this is a random little rectangle below the gravity calculator */
+span.bossHp + div {
+    visibility:hidden;
+}
+
+img[src="img/element/70.png"] {
+    display:none;
+}
+
+#tablestat .skillseparator {
+    border-bottom-color:#E1E1E1;
+}
+
+#tablecustom td {
+    border-color: #E1E1E1;
 }

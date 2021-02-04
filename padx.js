@@ -24,7 +24,6 @@ $('.series img.onload').each(function() {
       
     $('#series-view-toggler').click(function(e) {
       e.preventDefault();
-      console.log('normal view');
       $(this).closest('table').toggleClass('normal-view');
     });
     i += 1;
@@ -33,7 +32,6 @@ $('.series img.onload').each(function() {
     let title = $(this).attr('title');
     let regexp = /No\.(\d+) (.*)/;
     let matches = title.match(regexp);
-    console.log(matches);
     $(this).closest('a').attr('data-displaynumber', matches[1]);
     $(this).closest('a').attr('data-displaytitle', matches[2]);
   });

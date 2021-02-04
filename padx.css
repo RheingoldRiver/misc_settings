@@ -1,3 +1,8 @@
+:root {
+    --above-title-height:-10px;
+}
+
+
 .finalawokenevolve .absolute .onload,
 .finalevolve .absolute .onload,
 .require .absolute .onload {
@@ -63,6 +68,7 @@ div[style="width: 800px;"] {
     width:inherit;
     word-wrap:normal;
     white-space:normal;
+    hyphens:auto;
 }
 
 #history {
@@ -131,8 +137,61 @@ div[style="width: 800px;"] {
 
 #top {visibility:hidden;}
 
-.stars {
+#content .avatar {
+    margin-top:-10px;
+}
+
+.avatar + div.column {
+    background-color:unset!important;
+    border:unset!important;
+    height:98px!important;
+    width:1px!important;
+    margin-top:var(--above-title-height)!important;
+    position:relative!important;
+    float:left;
+    margin-left:0px!important;
+}
+
+#content .name {
+    position:relative;
+    float:right;
+    text-align:left;
+    z-index:50;
+    margin-top:var(--above-title-height);
+    margin-left:0;
+    width:calc(100% - 70px);
+    height:unset;
+}
+
+.name h1 {
+    float:left;
+    padding-top:0px;
+    white-space:normal;
+    line-height:30px;
+    word-wrap:normal;
+    text-align:left;
+    overflow:auto;
+    max-width:520px;
+    margin-right:50px;
+}
+
+#content .stars {
+    float:right;
     max-width:unset;
+    position:relative!important;
+    margin-top:unset;
+    margin-left:0;
+    width:calc(100% - 70px);
+    top:unset!important;
+}
+
+.stars + div {
+    height:1px!important;
+    clear:both!important;
+    width:calc(100% + 200px);
+    float:left;
+    position:relative;
+    margin-left:100px;
 }
 
 .stars img:nth-of-type(5n+1) {
@@ -143,6 +202,10 @@ div[style="width: 800px;"] {
     margin-left:0;
 }
 
+.devolution {
+    display:none;
+}
+
 .titlebar1 {
     background-image:none;
     min-width:unset!important;
@@ -150,7 +213,6 @@ div[style="width: 800px;"] {
     padding-left:0;
 }
 
-.column,
 .titlebar1 .element,
 .titlebar1 .elementborder,
 .titlebar1 .top {
@@ -191,10 +253,82 @@ img[src="img/element/70.png"] {
     display:none;
 }
 
+#tabledrop .floorseparator,
 #tablestat .skillseparator {
     border-bottom-color:#E1E1E1;
 }
 
 #tablecustom td {
     border-color: #E1E1E1;
+}
+
+
+/* tab switcher thingy on dungeon pages, which have inline styles we have to override.... */
+a#switchtab1[style*="background-color: rgb(177, 187, 57);"],
+a#switchtab2[style*="background-color: rgb(177, 187, 57);"],
+a#switchtab3[style*="background-color: rgb(177, 187, 57);"],
+a#switchtab4[style*="background-color: rgb(177, 187, 57);"]{
+    background-color:black!important;
+    border-color:black!important;
+}
+
+a#switchtab1,
+a#switchtab2,
+a#switchtab3,
+a#switchtab4{
+    background-color:#281F0D!important;
+    border-color:#281F0D!important;
+}
+
+#tablestat:not(.normal-view) .series {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
+    width:900px;
+    margin-left:-20px;
+}
+
+.normal-view .series {
+    display:flex;
+    width:950px;
+    flex-wrap:wrap;
+}
+
+.series a img {
+    display:block!important;
+    position:relative;
+}
+
+#tablestat:not(.normal-view) .series a:after {
+    display:block;
+    content:attr(data-displaytitle);
+    position:relative;
+    white-space:normal;
+    padding-right:1em;
+    left:55px;
+    bottom:40px;
+    margin-bottom:-30px;
+    max-width:100px;
+}
+
+#tablestat:not(.normal-view) .series a:before {
+    display:block;
+    content:attr(data-displaynumber);
+    top:20px;
+    left:55px;
+    margin-top:-20px;
+    z-index:20;
+    position:relative;
+}
+
+#tablestat:not(.normal-view) .series br {
+    display:none;
+}
+
+#tablestat:not(.normal-view) .zeries a {
+    padding-right:0;
+    position:relative!important;
+}
+
+#series-view-toggler {
+    margin-left:10px;
 }

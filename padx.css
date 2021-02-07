@@ -233,6 +233,10 @@ div[style="width: 800px;"] {
     width: 100%;
 }
 
+td.value-end[style="white-space: nowrap;"] {
+    white-space:normal!important;
+}
+
 /* some link on the front page */
 .titlebar1 .setting {
     display:none;

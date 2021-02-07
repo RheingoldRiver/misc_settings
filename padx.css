@@ -341,3 +341,42 @@ a#switchtab4{
 #series-view-toggler {
     margin-left:10px;
 }
+
+a[href="awokenskill.asp?s=73"],
+a[href="awokenskill.asp?s=74"],
+a[href="awokenskill.asp?s=75"],
+a[href="awokenskill.asp?s=76"],
+a[href="awokenskill.asp?s=77"] {
+    position:relative;
+}
+
+a[href="awokenskill.asp?s=73"]::after,
+a[href="awokenskill.asp?s=74"]::after,
+a[href="awokenskill.asp?s=75"]::after,
+a[href="awokenskill.asp?s=76"]::after,
+a[href="awokenskill.asp?s=77"]::after{
+    position:absolute;
+    left:0px;
+    top:2px;
+    z-index:30;
+}
+
+a[href="awokenskill.asp?s=73"]::after {
+    content:"CCR";
+}
+
+a[href="awokenskill.asp?s=74"]::after {
+    content:"CCB";
+}
+
+a[href="awokenskill.asp?s=75"]::after {
+    content:"CCG";
+}
+
+a[href="awokenskill.asp?s=76"]::after {
+    content:"CCL";
+}
+
+a[href="awokenskill.asp?s=77"]::after {
+    content:"CCD";
+}

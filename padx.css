@@ -342,16 +342,11 @@ a#switchtab4{
     margin-left:10px;
 }
 
-a[href*="awokenskill.asp?s="],
-a[href*="super-awokenskill.asp?s=73"] {
+a[href*="awokenskill.asp?s="] {
     position:relative;
 }
 
-a[href*="awokenskill.asp?s=73"]::after,
-a[href*="awokenskill.asp?s=74"]::after,
-a[href*="awokenskill.asp?s=75"]::after,
-a[href*="awokenskill.asp?s=76"]::after,
-a[href*="awokenskill.asp?s=77"]::after {
+a[href*="awokenskill.asp?s="]::after {
     position:absolute;
     left:0px;
     top:2px;
@@ -376,4 +371,15 @@ a[href*="awokenskill.asp?s=76"]::after {
 
 a[href*="awokenskill.asp?s=77"]::after {
     content:"CCD";
+}
+
+.awokenindex a,
+.awokenindex a img {
+    display:inline-block;
+    width:31px;
+    height:32px;
+}
+
+.awokenindex a::after {
+    top:13px;
 }

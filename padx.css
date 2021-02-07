@@ -42,7 +42,7 @@ div[style="width: 800px;"] {
 }
 
 /* ads */
-#leaderboard, #leaderboard1, #leaderboard2, #leaderboard3, #mrectangle, #mrectangle2, #mrectangle3, #skyscraper1, #skyscraper2 {
+#leaderboard, #leaderboard1, #leaderboard2, #leaderboard3, #leaderboard4, #leaderboard5, #mrectangle, #mrectangle2, #mrectangle3, #skyscraper1, #skyscraper2 {
     display:none;
 }
 
@@ -183,6 +183,11 @@ div[style="width: 800px;"] {
     margin-left:0;
     width:calc(100% - 70px);
     top:unset!important;
+}
+
+.info-box {
+    margin-top:20px;
+    clear:both;
 }
 
 .stars + div {

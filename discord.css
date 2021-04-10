@@ -82,3 +82,8 @@ a.channel-2QD9_O.da-channel.container-2Pjhx-.da-container.clickable-1JJAn8.da-cl
 .markup-2BOw-j pre {
  max-width:100%!important;
 }
+
+/* useless role manage */
+.settingCard-3w2mVL {
+    display:none;
+}

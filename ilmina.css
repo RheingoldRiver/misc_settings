@@ -56,7 +56,7 @@ div[data-bind="html: getActiveSkillDescription()"] {
 }
 
 /* remove awakening intro text */
-.adv-search-toplevel > .adv-search-option:nth-of-type(5) > div:first-of-type {
+.adv-search-toplevel > .adv-search-option:nth-of-type(5) div:not([data-bind="foreach: statAwakenings"]):first-of-type {
     display:none;
 }
 

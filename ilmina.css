@@ -56,7 +56,7 @@ div[data-bind="html: getActiveSkillDescription()"] {
 }
 
 /* remove awakening intro text */
-.adv-search-toplevel > .adv-search-option:nth-of-type(5) div:first-of-type {
+.adv-search-toplevel > .adv-search-option:nth-of-type(5) > div:first-of-type {
     display:none;
 }
 
@@ -201,6 +201,10 @@ advanced-search card-icon a::after {
   display:block;
   color:white;
   position:absolute;
-  top:95;
+  top:95px;
   width:400px;
+}
+
+advanced-search div[data-bind="foreach: searchResults"] > div {
+    position:relative;
 }

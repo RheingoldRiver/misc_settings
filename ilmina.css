@@ -60,6 +60,24 @@ div[data-bind="html: getActiveSkillDescription()"] {
     display:none;
 }
 
+.adv-search-toplevel > .adv-search-option:nth-of-type(5) div[data-bind="visible:!UserSettings.blockView()"] div {
+    position:relative;
+    line-height:1;
+    margin-top:10px;
+}
+
+.adv-search-toplevel > .adv-search-option:nth-of-type(5) div[data-bind="visible:!UserSettings.blockView()"] div::before {
+    display:block;
+    content:attr(data-bind);
+    position:absolute;
+    top:-15px;
+    gap:0;
+}
+
+.card-awakening.clickable {
+    margin-bottom:0;
+}
+
 .adv-search-toplevel > .adv-search-option:nth-of-type(5) br {
     display:none;
 }

@@ -60,15 +60,15 @@ div[data-bind="html: getActiveSkillDescription()"] {
     display:none;
 }
 
-.adv-search-toplevel > .adv-search-option:nth-of-type(5) div[data-bind="visible:!UserSettings.blockView()"] div {
+.search-awks div {
     position:relative;
     line-height:1;
     margin-top:10px;
 }
 
-.adv-search-toplevel > .adv-search-option:nth-of-type(5) div[data-bind="visible:!UserSettings.blockView()"] div::before {
+.search-awks div::before {
     display:block;
-    content:attr(data-bind);
+    content:attr(data-group-name);
     position:absolute;
     top:-15px;
     gap:0;

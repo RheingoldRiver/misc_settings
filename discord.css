@@ -1,4 +1,3 @@
-
 .unread-1xRYoj { display: none; }
 
 .item-2J1YMK {
@@ -38,7 +37,8 @@
 }
 
 /* hide shitty useless ui shit in friends list */
-a.channel-2QD9_O.da-channel.container-2Pjhx-.da-container.clickable-1JJAn8.da-clickable[href="/store"] {
+.channel-2QD9_O.container-2Pjhx-.clickable-1JJAn8[href="/store"]
+{
     display: none;
 }
 
@@ -86,4 +86,27 @@ a.channel-2QD9_O.da-channel.container-2Pjhx-.da-container.clickable-1JJAn8.da-cl
 /* useless role manage */
 .settingCard-3w2mVL {
     display:none;
+}
+
+.headerText-3Uvj1Y {
+    user-select: none;
+}
+.separator-2nZzUB,
+.username-1A8OIy,
+.separator-2nZzUB + * {
+    user-select: text;
+}
+
+/* options buttons opacity except on hover */
+.message-2qnXI6:hover .buttons-cl5qTG {
+    opacity:.5!important;
+}
+
+.message-2qnXI6 .buttons-cl5qTG:hover {
+    opacity:1!important;
+}
+
+/* code embeds */
+code.scrollbarGhostHairline-1mSOM1 {
+    line-height:1;
 }

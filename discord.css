@@ -6,8 +6,6 @@
     justify-content:flex-start;
 }
 
-#bd-customcss-editor { font-size:100%!important;}
-
 .buttonWrapper-Bm5QAU {
     display:none;
 }
@@ -17,7 +15,15 @@
 }
 
 /* Gift & Gif */
-.button-3AYNKb {
+.buttons-uaqb-5 > button {
+    display:none;
+}
+
+.buttons-uaqb-5 > div:first-of-type {
+    display:none;
+}
+
+.buttons-uaqb-5 > div:nth-of-type(2) {
     display:none;
 }
 
@@ -109,4 +115,54 @@
 /* code embeds */
 code.scrollbarGhostHairline-1mSOM1 {
     line-height:1;
+}
+
+
+/* Bye Banners */
+.animatedContainer-1NSq4T, .content-3YMskv [style="height: 84px;"], .bannerImage-3KhIJ6{
+    display: none;
+}
+.hasBanner-2SrLR3 .header-2V-4Sw, .hasBanner-2SrLR3 .header-2V-4Sw:hover{
+    color: var(--header-primary);
+    box-shadow: var(--elevation-low)
+}
+.iconTierOne-s_oiRb, .iconTierTwo-1JOWNK {
+    color: var(--text-muted);
+}
+
+
+/* Bye Stage Discovery */
+#private-channels [href="/discovery"] {display: none}
+
+
+#bd-pub-li {
+    display:none;
+}
+
+/* fandom logo */
+.listItem-GuPuDH:nth-of-type(2) .wrapper-1BJsBx img {
+    filter:hue-rotate(180deg);
+}
+
+.listItem-GuPuDH:nth-of-type(2) .wrapper-1BJsBx {
+    border-radius: 50%;
+    overflow:hidden;
+}
+
+
+/* fix channel # being broken */
+span.wrapper-3WhCwL.iconMention-1_KJ_B.iconMentionText-8GCluA.mention.interactive::before {
+    content:'';
+    display:inline-block;
+    position:relative;
+    bottom:1px;
+    height:0px;
+    width:1em;
+}
+
+
+/* no boosts */
+.container-1eD8xH,
+.container-3qpZp9 {
+    display: none;
 }

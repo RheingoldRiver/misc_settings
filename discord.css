@@ -32,18 +32,18 @@
     color:#9ED72D;
 }*/
 
-.embed-IeVjo6 {
-    max-width:700px;
+.embedWrapper-1MtIDg {
+    max-width:750px;
 }
 
 /* make emojis in embeds huge */
-.embed-IeVjo6 .emoji {
+.embedWrapper-1MtIDg .emoji {
     width:30px!important;
     height:30px!important;
 }
 
 /* hide shitty useless ui shit in friends list */
-.channel-2QD9_O.container-2Pjhx-.clickable-1JJAn8[href="/store"]
+.channel-1Shao0.container-1oeRFJ.clickable-28SzVr[href="/store"]
 {
     display: none;
 }
@@ -63,16 +63,15 @@
     background-color:rgb(54, 57, 63);
 }
 /* reposition context menu so it's not stupidly above the message */
-.container-3npvBV { position:unset; }
+.buttons-3dF5Kd { position:unset; }
 
 /* fix spacing between messages */
 .group-spacing-0 .groupStart-23k01U {
     margin-top:.3rem!important;
 }
 
-.da-compact,
-.message-2qnXI6,
-.container-3FojY8.da-container {
+.compact-2Nkcau.wrapper-30-Nkg,
+.cozy-VmLDNB.wrapper-30-Nkg {
     padding-top:0!important;
     padding-bottom:0!important;
 }
@@ -104,11 +103,11 @@
 }
 
 /* options buttons opacity except on hover */
-.message-2qnXI6:hover .buttons-cl5qTG {
+.message-2CShn3:hover .buttons-3dF5Kd {
     opacity:.5!important;
 }
 
-.message-2qnXI6 .buttons-cl5qTG:hover {
+.message-2CShn3 .buttons-3dF5Kd:hover {
     opacity:1!important;
 }
 
@@ -165,4 +164,8 @@ span.wrapper-3WhCwL.iconMention-1_KJ_B.iconMentionText-8GCluA.mention.interactiv
 .container-1eD8xH,
 .container-3qpZp9 {
     display: none;
+}
+
+li#chat-messages-930577565540818954 {
+    margin-top: 0;
 }

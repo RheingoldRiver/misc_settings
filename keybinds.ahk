@@ -17,12 +17,12 @@ return
 ^!+x::
 	IfWinActive ahk_class MozillaWindowClass
 	{
-		Send, ^+V
+		Send, !e
 		return
 	}
 	IfWinNotExist ahk_class MozillaWindowClass
 		return
-	ControlSend,ahk_parent, ^+V
+	ControlSend,ahk_parent, !e
 	return
 #a: ; source: https://superuser.com/questions/1125149/how-to-clear-all-windows-10-action-center-notifications-with-keyboard
 	Send #a
@@ -51,7 +51,7 @@ return
 #IfWinActive Firefox
 !]::Send ^{PgDn}
 ![::Send ^{PgUp}
-^k::Send ^l; search is always a typo for focus url bar
+^k::Send ^l
 ^1::
 	IfWinActive ahk_class MozillaWindowClass
 	ControlSend,ahk_parent, {Ctrl down}{Shift down}2{Shift up}{Ctrl up}
@@ -62,6 +62,9 @@ LWin::LButton
 ^l::Send !LL{Up}{Enter}
 ^p::Send !LN{up}{Up}{Enter}
 ^j::Send !LJ{down}{Enter}
+!]::Send ^{PgDn}
+![::Send ^{PgUp}
+#IfWinActive Visual Studio Code
 !]::Send ^{PgDn}
 ![::Send ^{PgUp}
 #IfWinActive Replace Special
@@ -76,4 +79,8 @@ LWin::LButton
 #IfWinActive .*PyCharm.*
 !]::Send ^{PgDn}
 ![::Send ^{PgUp}
+#IfWinActive Visual Studio Code
+^T::
+	Send, ^+P
+	Send, {BackSpace}
 #IfWinActive

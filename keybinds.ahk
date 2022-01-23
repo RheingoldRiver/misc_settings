@@ -67,6 +67,9 @@ LWin::LButton
 #IfWinActive Visual Studio Code
 !]::Send ^{PgDn}
 ![::Send ^{PgUp}
+^T::
+	Send, ^+P
+	Send, {BackSpace}
 #IfWinActive Replace Special
 ^Z::return
 #IfWinActive Excel
@@ -79,8 +82,4 @@ LWin::LButton
 #IfWinActive .*PyCharm.*
 !]::Send ^{PgDn}
 ![::Send ^{PgUp}
-#IfWinActive Visual Studio Code
-^T::
-	Send, ^+P
-	Send, {BackSpace}
 #IfWinActive

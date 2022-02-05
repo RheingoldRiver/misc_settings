@@ -204,7 +204,12 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 	pointer-events: none;
 	display:block;
 }
-#main-menubar{margin-left:150px;pointer-events: auto}
+
+/* Update this if changing menus or bookmarks (increase the number if adding things)!!!! keyword */
+#main-menubar{
+  margin-left:154px;
+  pointer-events: auto
+}
 #nav-bar-customization-target > toolbarbutton:nth-of-type(4) {margin-right:150px!important} /* change this if adding or removing menu bar items */
 /* End move URL bar */
 
@@ -241,8 +246,6 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
   background-color: #444444!important;
   color: #A4A4A4!important;
 }
-
-/* Update this if changing menus or bookmarks (increase the number if adding things)!!!! keyword */
 
 /* Constrains urlbar popup to urlbar width */
 /* Firefox 70+ */
@@ -281,7 +284,12 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 .tab-content {
 	background-color:#282828;
 	color:#A4A4A4;
-	margin-right:2px!important;
+	margin-right:2px !important;
+}
+
+.tabbrowser-tab {
+	padding-left:0!important;
+	padding-right:0!important;
 }
 
 .tab-content[selected] {
@@ -337,10 +345,9 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 	overflow:hidden;
 }
 
-#fxa-toolbar-menu-button {
-  display:none;
-}
-
+#fxa-toolbar-menu-button,
+#context-savelinktopocket,
+#context-pocket,
 #whats-new-menu-button {
   display: none;
 }
@@ -377,11 +384,53 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 
 #urlbar[focused]{ margin: 0px !important }
 
+.urlbarView.megabar .urlbarView-type-icon {
+  height:15px!important;
+  width:15px!important;
+}
+
+/*  Show Keyword Field & URL(Location) Field  */
+#editBMPanel_keywordRow,
+#editBMPanel_locationRow
+{
+   visibility: visible !important;
+}
+
 /* uncomment this to inspect urlbar pop-up */
 /*
 #urlbar{ height: auto !important; z-index: 3 !important; }
 .urlbarView{ display: block !important; }
 #nav-bar{ overflow: visible !important; }
 
-*/
+
 /* uncomment this to inspect urlbar pop-up - end */
+
+#search-container { display:none; }
+
+.search-one-offs {
+  background-color:blue!important;
+  display:none!important;
+}
+
+menulist > menupopup > menuitem, menulist > menupopup > menucaption, menulist > menupopup > menu {
+  color:#E3E3E3;
+}
+
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
+  margin-inline-start:0px!important;
+}
+
+
+toolbar .toolbarbutton-1 {
+  padding-left:0!important;
+  padding-right:0;
+}
+
+menupopup > menuitem,
+menupopup > menu {
+	padding-block: 0em!important;
+}
+
+.menu-right image {
+  filter:invert(100%);
+}

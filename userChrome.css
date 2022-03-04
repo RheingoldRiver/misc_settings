@@ -30,7 +30,7 @@
   }
   search-textbox,
   #searchFilter,
-  menulist,
+
   input,  
   textbox,
   richlistbox,
@@ -42,9 +42,6 @@
     color: inherit !important;
   }
   
-  menulist{ border: 1px solid graytext; padding-inline-end: 4px }
-  menulist dropmarker{ filter: invert(1) }
-  menulist:hover{ border-color: highlight; background-color: rgba(255,255,255,0.1) }
     
   .menubar-left{ fill: currentColor; -moz-context-properties: fill; }
   
@@ -82,75 +79,6 @@ xul|vbox.tabmodalprompt-mainContainer{
 /* Source: https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/dark_additional_windows.css */
 /* End */
 /*********************************************/
-
-/* Start https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/dark_context_menus.css */
-
-/* Makes context menus dark. Also affects some portions of menu popups */
-/* Uses dark theme colors but does not respect dark theme variables (they wouldn't work on sidebar context menu) */
-
-:root{
-  --uc-menu-bkgnd: #262626;
-  --uc-menu-color: rgb(230,230,230);
-  --uc-menu-dimmed: rgba(255,255,255,0.1);
-  --uc-menu-disabled: rgb(125, 125, 125);
-}
-panel richlistbox,
-panel tree,
-panel button,
-panel menulist,
-panel textbox,
-panel input,
-menupopup,
-menu,
-menuitem{ -moz-appearance: none !important; }
-
-menulist,
-menuitem,
-menu{ min-height: 1.8em }
-
-panel menulist{ border: 1px solid transparent }
-
-panel richlistbox,
-panel tree,
-panel button,
-panel menulist,
-panel textbox,
-panel input,
-panel #searchbar,
-menupopup:not(#BMB_bookmarksPopup),
-#main-menubar > menu > menupopup,
-#context-navigation{
-  color: var(--uc-menu-color) !important;
-  padding: 2px;
-  background-color: var(--uc-menu-bkgnd) !important;
-  border-color: var(--uc-menu-disabled) !important;
-}
-
-panel textbox input{ padding: 2px !important; }
-
-panel input{ border-width: 1px; border-style: solid; background-color: rgba(0,0,0,0.1) !important; }
-panel #searchbar{ background-color: rgba(0,0,0,0.1) !important; padding: 0 !important; }
-panel #searchbar input{ background-color: transparent !important; }
-
-panel menulist:hover,
-panel menulist[open]{ border-color: Highlight !important; }
-
-#editBMPanel_folderMenuList > menupopup > menuitem{ color: var(--uc-menu-color) !important; }
-
-panel treechildren::-moz-tree-row(selected),
-panel button:hover,
-menu:hover,
-menu[_moz-menuactive],
-menu[open],
-menuitem:hover,
-menuitem[_moz-menuactive]{ background-color: var(--uc-menu-dimmed) !important; color: inherit !important; }
-
-menu[disabled="true"],
-menuitem[disabled="true"]{ color: var(--uc-menu-disabled) !important; }
-
-menu:not(.subviewbutton) > .menu-right{ filter: invert(1) }
-
-/* End https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/dark_context_menus.css */
 
 /* Dark scrollbars */
 
@@ -232,7 +160,15 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 
 /* Context menus */
 /*#contentAreaContextMenu > * { -moz-box-ordinal-group: 3 !important; }*/
-#context-copylink, #context-saveimage, #context-viewbgimage { background-color:#571B7E!important; }
+#context-copylink,
+#context-saveimage,
+#context-viewimage,
+#context-copyimage-contents,
+#context-copyimage,
+#_72d075e5-7823-41d8-8225-9bebeb19c75f_-menuitem-_view-image-by-cihan,
+#context-viewbgimage {
+	background-color:#571B7E!important;
+}
 #context-navigation, #context-sep-navigation {display:none!important;}
 #screenshots_mozilla_org-menuitem-_create-screenshot {display:none!important;}
 
@@ -412,9 +348,6 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
   display:none!important;
 }
 
-menulist > menupopup > menuitem, menulist > menupopup > menucaption, menulist > menupopup > menu {
-  color:#E3E3E3;
-}
 
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
   margin-inline-start:0px!important;
@@ -431,6 +364,19 @@ menupopup > menu {
 	padding-block: 0em!important;
 }
 
-.menu-right image {
-  filter:invert(100%);
+#ContentSelectDropdown .ContentSelectDropdown-item-1:not([_moz-menuactive="true"]) {
+  color:var(--menu-color)!important;
+  background-color:transparent!important;
+}
+
+#ContentSelectDropdown > menupopup {
+  --panel-color: var(--menu-color)!important;
+}
+
+#ContentSelectDropdown .ContentSelectDropdown-item-0:not([_moz-menuactive="true"]) {
+  background-color:var(--menu-background-color)!important;
+}
+
+#ContentSelectDropdown > menupopup {
+  --content-select-background-image:unset!important;
 }

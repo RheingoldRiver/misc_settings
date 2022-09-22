@@ -36,6 +36,10 @@
     max-width:750px;
 }
 
+.gridContainer-1cF_Ic {
+    max-width: 650px;
+}
+
 /* make emojis in embeds huge */
 .embedWrapper-1MtIDg .emoji {
     width:30px!important;
@@ -161,6 +165,7 @@ span.wrapper-3WhCwL.iconMention-1_KJ_B.iconMentionText-8GCluA.mention.interactiv
 
 
 /* no boosts */
+.container-2giAcK,
 .container-1eD8xH,
 .container-3qpZp9 {
     display: none;
@@ -168,4 +173,9 @@ span.wrapper-3WhCwL.iconMention-1_KJ_B.iconMentionText-8GCluA.mention.interactiv
 
 li#chat-messages-930577565540818954 {
     margin-top: 0;
+}
+
+.mention {
+    background-color:#3D414F!important;
+    color:#778ACF!important;
 }

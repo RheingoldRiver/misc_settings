@@ -1,4 +1,7 @@
-.unread-XRkyaQ { display: none; }
+@import url(https://cdn.jsdelivr.net/gh/Overimagine1/old-discord-font/source.min.css);
+
+.unread-XRkyaQ,
+.bar-wDIGjg { display: none; }
 
 .item-2J1YMK {
     text-align:left;

@@ -110,43 +110,62 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 /* End change highlight color of url dropdown */
 
 /* Move URL bar */
-#TabsToolbar{-moz-box-ordinal-group: 1 !important;}
+#TabsToolbar{
+  order: 1 !important;
+}
 #urlbar{margin: 0 5px !important;}
 #nav-bar{
 	--toolbarbutton-inner-padding: 4px;
-	-moz-box-ordinal-group:0 !important;
+	order:0 !important;
 	  z-index:10!important;
 	  background-color:unset!important;
 	  pointer-events: none;
+  position:relative;
+  
 }
 #nav-bar-customization-target *,
 #customizationui-widget-panel,
 #customizationui-widget-panel * {
 	pointer-events:initial;
 }
-#toolbar-menubar{
-	height: 26px!important;
+/*#toolbar-menubar{
+
 	position: absolute;
 	top:7px;
 	z-index: 2;
 	pointer-events: none;
 	display:block;
+}*/
+
+#titlebar{
+order: 2;
+-moz-appearance: none !important;
+--tabs-navbar-shadow-size: 0px;
+}
+
+:root{ --uc-window-control-width: 0px !important }
+
+#toolbar-menubar{
+position: fixed;
+display: flex;
+top: var(--uc-titlebar-padding,0px);
+height: 29px!important;
+  padding-top:5px;
+width: 100%;
+	pointer-events: none;
 }
 
 /* Update this if changing menus or bookmarks (increase the number if adding things)!!!! keyword */
 #main-menubar{
-  margin-left:154px;
-  pointer-events: auto
+  margin-left:158px!important;
+  pointer-events: auto;
 }
-#nav-bar-customization-target > toolbarbutton:nth-of-type(4) {margin-right:150px!important} /* change this if adding or removing menu bar items */
+#nav-bar-customization-target > toolbaritem:nth-of-type(3) {margin-right:150px!important} /* change this if adding or removing menu bar items */
 /* End move URL bar */
 
 /* Change back/forward icons */
-#back-button > .toolbarbutton-icon,#forward-button > .toolbarbutton-icon{
-  list-style-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAQCAYAAABz9a1kAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gcBExIOHOjroQAAAtxJREFUSMe1Vs9LG0EU/l6pUMyuG6mHHCKEqpCDlh5KY6AHodCmEHClQoKk/gBPTSKYPyQVx/QiNNRGaMBiUrwoBYMW7N5KPSjoQUgPvbUb1lIoO6+HbNJUJIkQP9hllnnz5pv3vW9Y4Ipg5o7EXMSNZpPd3d2YnZ3F8PBw2xtdnAsGg5iamkJXVxc6hRCAfQAbzIxmD4ANJzaEDiIMYFXX9SMhBKuqut2KiKqq20II1nX9CMCqk6MpbjZ+5HK5+jgWi40BGA8EAmNzc3ODiqIoDIZlWdQqqWVZ5O51Y3Jy0h8KhbzZbPa+YRiPABRzuVypYY/LibCUeD497Qcw3t/fr6dSKX9f3203QJAsgeqJK200a4WlBBPB5XIpiUT8XjQa9aXT6dFYLFYAUHy7tnbcuKbxdL0AnmmaNpNMJgeHhgY9YPoX4ZQ9ubCwU6lUnjQj0tPTsy2Wlx8TEUBOAgZAjJOT0+9CiFPTNN8AeA/gR2NFFE3TPkQiEW9wNOgDACklmAkEBojqbmhXGskMMIOIqocAgYgxcGfAs/RyyXPw+cCbz+dnTNN8CsCq2TcUDoc9gQcBny1tSGlD2hJS2rClhLRtSMmQsn1pavHSdnL8l9NG4EHAFw6HPTVn1SpSXF9f9+7t7UVSqZTf5ep2M5xqOArWRqqqqq2IqKqq2tJu0J6ddzXn+fmvn+l0+rhcLucBFBuJ/AGwVC6XvywuLtadIpmVWo8QV/VuVxqWVWkkcb1HiMh6nc2eGoZRcgiULnVNJpMpEVB6EY+HDcMY13X94cTEhM+yrFsAQNVeaVMau95XiqL83tzcPCsUCp8AFF9lMlsMIB6PX25fyQxihhArWyBsJROJ6O7ubjwSiXhHRu76iLhtaarNDhwefj3L5/PfTNPMiJWVd2DHCERXvll7AcxrmrYvhGAi2ml1sxLRjhCCNU3bBzDv5OgYFAAf2yVCRAfOmuvBdf0G/AX2HdWytHNocwAAAABJRU5ErkJggg==');
-}
-#back-button > .toolbarbutton-icon{ -moz-image-region: rect(0, 16px, 16px, 0) !important;}
-#forward-button > .toolbarbutton-icon{ -moz-image-region: rect(0, 34px, 16px, 18px) !important;}
+#back-button > .toolbarbutton-icon{ list-style-image:url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath stroke-width='0' transform='rotate(-90, 8, 8)' id='svg_1' d='m2.81162,12.53983l5.18838,-9.07967l5.18838,9.07967l-10.37676,0z' stroke='%23000' fill='%239f9f9f'/%3E%3C/g%3E%3C/svg%3E");}
+#forward-button > .toolbarbutton-icon{ list-style-image:url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath transform='rotate(90, 8, 8)' stroke-width='0' id='svg_1' d='m2.81162,12.53983l5.18838,-9.07967l5.18838,9.07967l-10.37676,0z' stroke='%23000' fill='%239f9f9f'/%3E%3C/g%3E%3C/svg%3E");}
 /* End change forward/back buttons */
 
 /* Remove the Hamburger Button */
@@ -156,10 +175,10 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 #PlacesChevron {display:none;}
 
 /* Separate reload & stop */
-#reload-button, #stop-button { display: -moz-box !important; }
+#reload-button, #stop-button { display: flex !important; }
 
 /* Context menus */
-/*#contentAreaContextMenu > * { -moz-box-ordinal-group: 3 !important; }*/
+/*#contentAreaContextMenu > * { order: 3 !important; }*/
 #context-copylink,
 #context-saveimage,
 #context-viewimage,
@@ -272,7 +291,7 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 /* Move close find bar to the left & recolor */
 
 :-moz-any(.browserContainer,#viewSource) :-moz-any(findbar,#FindToolbar) .findbar-closebutton {
-  -moz-box-ordinal-group: 0 !important;
+  order: 0 !important;
   background-color:#282828!important;
   color:#9F9F9F!important;
 }
@@ -281,6 +300,7 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 	overflow:hidden;
 }
 
+#firefox-view-button,
 #fxa-toolbar-menu-button,
 #context-savelinktopocket,
 #context-pocket,

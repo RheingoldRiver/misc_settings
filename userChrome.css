@@ -164,8 +164,8 @@ width: 100%;
 /* End move URL bar */
 
 /* Change back/forward icons */
-#back-button > .toolbarbutton-icon{ list-style-image:url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath stroke-width='0' transform='rotate(-90, 8, 8)' id='svg_1' d='m2.81162,12.53983l5.18838,-9.07967l5.18838,9.07967l-10.37676,0z' stroke='%23000' fill='%239f9f9f'/%3E%3C/g%3E%3C/svg%3E");}
-#forward-button > .toolbarbutton-icon{ list-style-image:url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath transform='rotate(90, 8, 8)' stroke-width='0' id='svg_1' d='m2.81162,12.53983l5.18838,-9.07967l5.18838,9.07967l-10.37676,0z' stroke='%23000' fill='%239f9f9f'/%3E%3C/g%3E%3C/svg%3E");}
+#back-button > .toolbarbutton-icon{ list-style-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath fill='%239f9f9f' d='M12.54 13.188 3.46 8l9.08-5.188v10.376z'/%3E%3C/svg%3E");}
+#forward-button > .toolbarbutton-icon{ list-style-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath fill='%239f9f9f' d='M3.46 2.812 12.54 8l-9.08 5.188V2.812z'/%3E%3C/svg%3E");}
 /* End change forward/back buttons */
 
 /* Remove the Hamburger Button */

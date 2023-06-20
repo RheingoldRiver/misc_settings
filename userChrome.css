@@ -290,8 +290,8 @@ width: 100%;
 
 /* Move close find bar to the left & recolor */
 
-:-moz-any(.browserContainer,#viewSource) :-moz-any(findbar,#FindToolbar) .findbar-closebutton {
-  order: 0 !important;
+.findbar-closebutton {
+  order: -1 !important;
   background-color:#282828!important;
   color:#9F9F9F!important;
 }

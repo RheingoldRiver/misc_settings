@@ -226,7 +226,6 @@ width: 100%;
 :root[uidensity="compact"] .urlbarView { margin-top: 2px }
 :root[uidensity="touch"] .urlbarView { margin-top: 1px }
 #urlbar[open]{ border-bottom-right-radius: 0px !important; border-bottom-left-radius: 0px !important; }
-.urlbarView-row{ padding: 6px 0px !important; }
 
 /* Pink highlight */
 ::-moz-selection { background:#FF00FF!important;color:white!important; }
@@ -290,8 +289,8 @@ width: 100%;
 
 /* Move close find bar to the left & recolor */
 
-.findbar-closebutton {
-  order: -1 !important;
+.browserContainer,#viewSource :-moz-any(findbar,#FindToolbar) .findbar-closebutton {
+  order: 0 !important;
   background-color:#282828!important;
   color:#9F9F9F!important;
 }
@@ -317,12 +316,6 @@ width: 100%;
   color:#9F9F9F;
 }
 
-.urlbarView-row[aria-selected="true"],
-.urlbarView-row[aria-selected="true"] .urlbarView-row-inner {
-  background-color:#FF00FF!important;
-}
-
-
 /* Make urlbar megabar appear more compact */
 /* Set the pref browser.urlbar.megabar to true */
 #urlbar[breakout]{
@@ -333,12 +326,20 @@ width: 100%;
 }
 #urlbar[breakout]:not([open]){ bottom: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important; }
 .urlbarView{ margin-inline: 0 !important; width: auto !important; }
-.urlbarView-row{ padding: 0 4px !important; }
+.urlbarView-row{ padding: 2px 7px !important; }
+.urlbarView-row-inner{ padding: 0 !important; }
 #urlbar-background{ animation: none !important; }
 #urlbar-input-container{ padding: 0 !important; height: 98% !important; }
 #identity-box{ padding-block: var(--urlbar-icon-padding) }
 
+.urlbarView-button-menu.urlbarView-button { display:none!important; }
+
 #urlbar[focused]{ margin: 0px !important }
+
+.urlbarView-row[row-selectable]:not([selected]):hover {
+	background-color: #E851E8 !important;
+  color:#FFFFFF!important;
+}
 
 .urlbarView.megabar .urlbarView-type-icon {
   height:15px!important;

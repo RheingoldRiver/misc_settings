@@ -128,14 +128,6 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 #customizationui-widget-panel * {
 	pointer-events:initial;
 }
-/*#toolbar-menubar{
-
-	position: absolute;
-	top:7px;
-	z-index: 2;
-	pointer-events: none;
-	display:block;
-}*/
 
 #titlebar{
 order: 2;
@@ -336,9 +328,14 @@ width: 100%;
 
 #urlbar[focused]{ margin: 0px !important }
 
-.urlbarView-row[row-selectable]:not([selected]):hover {
+.urlbarView-row[selected=""]
+ {
 	background-color: #E851E8 !important;
   color:#FFFFFF!important;
+}
+
+.urlbarView-row[row-selectable]:not([selected]):hover {
+  background-color: #21252B;
 }
 
 .urlbarView.megabar .urlbarView-type-icon {

@@ -120,17 +120,13 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 	  z-index:10!important;
 	  background-color:unset!important;
   position:relative;
+  	pointer-events:none;
   
 }
-#nav-bar-customization-target *,
+#nav-bar-customization-target > *,
 #customizationui-widget-panel,
 #customizationui-widget-panel * {
 	pointer-events:initial;
-}
-
-.bookmark-item > .toolbarbutton-text,
-.bookmark-item > .toolbarbutton-icon{
-  pointer-events: none !important;
 }
 
 #titlebar{
@@ -266,6 +262,10 @@ width: 100%;
   color:#999A9A;
   padding-top:1px!important;
   padding-bottom:1px!important;
+}
+
+.findbar-closebutton {
+  order:-1!important;
 }
 
 /* color is way too bright for this shit */

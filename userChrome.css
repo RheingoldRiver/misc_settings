@@ -119,7 +119,6 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 	order:0 !important;
 	  z-index:10!important;
 	  background-color:unset!important;
-	  pointer-events: none;
   position:relative;
   
 }
@@ -127,6 +126,11 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 #customizationui-widget-panel,
 #customizationui-widget-panel * {
 	pointer-events:initial;
+}
+
+.bookmark-item > .toolbarbutton-text,
+.bookmark-item > .toolbarbutton-icon{
+  pointer-events: none !important;
 }
 
 #titlebar{

@@ -46,6 +46,6 @@ a .list-group-item-text span.hlcheck:hover {
     font-weight:bold;
 }
 
-.panel.panel-default ~ .panel.panel-default .progress-row.autocolspan {
+.progress-row.autocolspan {
     display:none;
 }

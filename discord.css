@@ -1,7 +1,7 @@
 @import url(https://cdn.jsdelivr.net/gh/Overimagine1/old-discord-font/source.min.css);
 
 .unread-XRkyaQ,
-.bar-wDIGjg { display: none; }
+.bar__004d9 { display: none; }
 
 .item-2J1YMK {
     text-align:left;
@@ -35,30 +35,23 @@
     color:#9ED72D;
 }*/
 
-.embedWrapper-1MtIDg {
+.embedWrapper_c143d9 {
     max-width:750px;
 }
 
-.gridContainer-1cF_Ic {
+.gridContainer_de8cdc {
     max-width: 650px;
 }
 
 /* make emojis in embeds huge */
-.embedWrapper-1MtIDg .emoji {
+.embedWrapper_c143d9 .emoji {
     width:30px!important;
     height:30px!important;
 }
 
-/* hide shitty useless ui shit in friends list */
-.channel-1Shao0.container-1oeRFJ.clickable-28SzVr[href="/store"]
-{
-    display: none;
-}
-
-/* hide shitty useless reaction default emojis */
-.emojiButton-jE9tXC {
-    display: none;
-}
+/* reposition context menu so it's not stupidly above the message */
+/* this css is out of date and won't do anything even if uncommented, just here for documentation */
+/*
 .container-3npvBV:hover .emojiButton-jE9tXC {
     display: block;
 }
@@ -69,22 +62,26 @@
     opacity:1;
     background-color:rgb(54, 57, 63);
 }
-/* reposition context menu so it's not stupidly above the message */
+
 .buttons-3dF5Kd { position:unset; }
+*/
 
 /* fix spacing between messages */
 .group-spacing-0 .groupStart-23k01U {
     margin-top:.3rem!important;
 }
 
-.compact-2Nkcau.wrapper-30-Nkg,
-.cozy-VmLDNB.wrapper-30-Nkg {
+/*
+The button about the message actions */
+
+.message__80c10.wrapper__09ecc.compact__54ecc.zalgo__39311 {
     padding-top:0!important;
     padding-bottom:0!important;
 }
 
 /* fix spacing around day change */
-.hasContent-1_DUdQ {
+divider__8cf56.hasContent__8519e,
+.divider_b9338f.hasContent_fea365 {
     margin-top:1rem;
     margin-bottom:.3rem!important;
 }
@@ -119,12 +116,13 @@
 }
 
 /* code embeds */
-code.scrollbarGhostHairline-1mSOM1 {
+.markup_a7e664 code {
     line-height:1;
 }
 
 
 /* Bye Banners */
+.container__4f639.containerWithMargin__7d380,
 .animatedContainer-1NSq4T, .content-3YMskv [style="height: 84px;"], .bannerImage-3KhIJ6{
     display: none;
 }
@@ -181,4 +179,23 @@ li#chat-messages-930577565540818954 {
 .mention {
     background-color:#3D414F!important;
     color:#778ACF!important;
+}
+
+
+/* 
+
+new stuff
+
+*/
+
+/* hide nitro and shop tabs in DMs */
+.channel_c21703 .linkButton_ebd2ba > .link__2e8e1[href="/shop"],
+.channel_c21703 .linkButton_ebd2ba > .link__2e8e1[href="/store"] {
+  display: none;
+}
+
+button.button_afdfd9.lookBlank__7ca0a.colorBrand_b2253e.grow__4c8a4[aria-label="Send a gift"],
+button.button_afdfd9.lookBlank__7ca0a.colorBrand_b2253e.grow__4c8a4[aria-label="Open sticker picker"],
+button.button_afdfd9.lookBlank__7ca0a.colorBrand_b2253e.grow__4c8a4[aria-label="Open GIF picker"] {
+    display:none;
 }

@@ -49,3 +49,9 @@ a .list-group-item-text span.hlcheck:hover {
 .progress-row.autocolspan {
     display:none;
 }
+
+.btn.btn-info[href="#new"] {
+    background-color:rgb(41,179,150);
+    color:#1A1D1E;
+    border:solid 1px #1A1D1E;
+}

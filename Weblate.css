@@ -55,3 +55,38 @@ a .list-group-item-text span.hlcheck:hover {
     color:#1A1D1E;
     border:solid 1px #1A1D1E;
 }
+
+a.btn.btn-link[title="View details"]::after {
+    content:"View change";
+    margin-left:2px;
+    color:var(--link-color);
+}
+
+a.btn.btn-link[title="View details"] svg path {
+    fill:var(--link-color);
+}
+
+.editor-wrap:has(.highlighted-output.readonly)::after {
+    content:"This string is read-only!";
+    color:red;
+}
+
+.editor-wrap:has(.highlighted-output.readonly) {
+    pointer-events:none;
+    cursor:pointer;
+}
+
+.panel-body:has(.highlighted-output.readonly) + .panel-footer .text-danger {
+    display:none;
+}
+
+.state-icon.red::after {
+    content:"View problems";
+    margin-left:4px;
+    text-decoration:unset;
+    color:#FF7559;
+}
+
+.breadcrumb li:nth-of-type(3) {
+    font-size:25px;
+}

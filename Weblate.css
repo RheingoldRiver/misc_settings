@@ -87,6 +87,6 @@ a.btn.btn-link[title="View details"] svg path {
     color:#FF7559;
 }
 
-.breadcrumb li:nth-of-type(3) {
+h1 .breadcrumb li:nth-of-type(3) {
     font-size:25px;
 }

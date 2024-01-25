@@ -199,3 +199,8 @@ button.button_afdfd9.lookBlank__7ca0a.colorBrand_b2253e.grow__4c8a4[aria-label="
 button.button_afdfd9.lookBlank__7ca0a.colorBrand_b2253e.grow__4c8a4[aria-label="Open GIF picker"] {
     display:none;
 }
+
+/* embed max width */
+.embedWrapper_c143d9 {
+    max-width:calc(100% - 125px)!important;
+}

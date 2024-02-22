@@ -203,3 +203,7 @@ button.button_afdfd9.lookBlank__7ca0a.colorBrand_b2253e.grow__4c8a4[aria-label="
 article.embedWrapper_c143d9.embedFull__8dc21.embed_d3cbe3.markup_a7e664.justifyAuto__70e6c {
     max-width:calc(100% - 150px)!important;
 }
+
+.previewChannelRow_f6f82c {
+    display:none;
+}

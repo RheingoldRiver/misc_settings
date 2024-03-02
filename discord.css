@@ -207,3 +207,15 @@ article.embedWrapper_c143d9.embedFull__8dc21.embed_d3cbe3.markup_a7e664.justifyA
 .previewChannelRow_f6f82c {
     display:none;
 }
+
+/* scale up chat a bit */
+.username_d30d99,
+.markup_a7e664 {
+    font-size:1.1rem;
+}
+
+.name__8d1ec {
+ font-size:19px;
+}
+
+/* end scale up chat a bit */

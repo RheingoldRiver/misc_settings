@@ -208,7 +208,7 @@ article.embedWrapper_c143d9.embedFull__8dc21.embed_d3cbe3.markup_a7e664.justifyA
     display:none;
 }
 
-/* scale up chat a bit */
+/* scale up chat a bit 
 .username_d30d99,
 .markup_a7e664 {
     font-size:1.1rem;
@@ -219,3 +219,27 @@ article.embedWrapper_c143d9.embedFull__8dc21.embed_d3cbe3.markup_a7e664.justifyA
 }
 
 /* end scale up chat a bit */
+
+.activityPanel__22355 { display:none; }
+
+.textArea__74543,
+.username_d30d99,
+.markup_a7e664 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:1.1rem;
+    line-height:1.475rem;
+}
+
+.username_d30d99 {
+    opacity:.9;
+}
+
+.text-sm-normal_e612c7 {
+    font-size:17px;
+}
+
+span.memberNameText__731e2.username_d272d6.desaturateUserColors_b72bd3,
+.text-sm-medium__1ba28,
+.text-xs-normal__56c35{
+    font-size: 20px;
+}

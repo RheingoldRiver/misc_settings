@@ -12,7 +12,11 @@ Pause::Send,{Insert}
 ^!+d:: Send, https://discord.gg/6SNQ4c6
 Hotstring("EndChars","`t")
 ::apiserver::https://discord.gg/m3SCJhs
-::rmwct::git{+}git://github.com/RheingoldRiver/river_mwclient
+::mcuh::much
+::jsut::just
+::tempalte::template
+::Tempalte::Template
+::eay::easy
 return
 ^!+x::
 	IfWinActive ahk_class MozillaWindowClass

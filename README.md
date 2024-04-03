@@ -1,0 +1,1 @@
+This is a collection of settings/config files that I use for various programs/websites. In addition to serving as a backup & transfer location, these are available so anyone else can copy-paste files from this repo & use them also. Feel free to copy, adapt, and claim as your own, I am happy for any distribution that means more people have better UX :)

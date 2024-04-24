@@ -17,6 +17,9 @@ Hotstring("EndChars","`t")
 ::tempalte::template
 ::Tempalte::Template
 ::eay::easy
+::mroe::more
+::yeha::yeah
+::availble::available
 return
 ^!+x::
 	IfWinActive ahk_class MozillaWindowClass
@@ -59,7 +62,6 @@ return
 ^1::
 	IfWinActive ahk_class MozillaWindowClass
 	ControlSend,ahk_parent, {Ctrl down}{Shift down}2{Shift up}{Ctrl up}
-LWin::LButton
 ^d::return
 +^Q::Return
 #IfWinActive Notepad++

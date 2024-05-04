@@ -20,6 +20,10 @@ Hotstring("EndChars","`t")
 ::mroe::more
 ::yeha::yeah
 ::availble::available
+::cna::can
+::shoudl::should
+::coudl::could
+::ened::need
 return
 ^!+x::
 	IfWinActive ahk_class MozillaWindowClass
@@ -83,9 +87,6 @@ return
 #IfWinActive AutoWikiBrowser
 ^X::^I
 #IfWinActive .*ST.*
-!]::Send ^{PgDn}
-![::Send ^{PgUp}
-#IfWinActive .*PyCharm.*
 !]::Send ^{PgDn}
 ![::Send ^{PgUp}
 #IfWinActive

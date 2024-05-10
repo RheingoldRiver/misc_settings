@@ -243,3 +243,13 @@ span.memberNameText__731e2.username_d272d6.desaturateUserColors_b72bd3,
 .text-xs-normal__56c35{
     font-size: 20px;
 }
+
+article {
+    max-width:100%!important;
+}
+
+button[aria-label="Send a gift"] + div,
+button[aria-label="Send a gift"] + div + div,
+button[aria-label="Send a gift"] {
+    display:none;
+}

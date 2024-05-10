@@ -24,6 +24,9 @@ Hotstring("EndChars","`t")
 ::shoudl::should
 ::coudl::could
 ::ened::need
+::soemthing::something
+::nto::not
+::missign::missing
 return
 ^!+x::
 	IfWinActive ahk_class MozillaWindowClass

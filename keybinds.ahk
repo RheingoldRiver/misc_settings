@@ -9,7 +9,7 @@ Pause::Send,{Insert}
 ^!+l::Run, explore D:\
 ^!+p::Run, control
 ^!m::Run, explore D:\Media
-^!+d:: Send, https://discord.gg/6SNQ4c6
+^!+d:: Send, https://discord.gg/rTnST57tuW
 Hotstring("EndChars","`t")
 ::apiserver::https://discord.gg/m3SCJhs
 ::mcuh::much

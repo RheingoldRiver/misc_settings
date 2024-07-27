@@ -222,6 +222,8 @@ article.embedWrapper_c143d9.embedFull__8dc21.embed_d3cbe3.markup_a7e664.justifyA
 
 .activityPanel__22355 { display:none; }
 
+.markup_f8f345,
+.messageContent_f9f2ca,
 .textArea__74543,
 .username_d30d99,
 .markup_a7e664 {
@@ -252,4 +254,9 @@ button[aria-label="Send a gift"] + div,
 button[aria-label="Send a gift"] + div + div,
 button[aria-label="Send a gift"] {
     display:none;
+}
+
+.container_b15955:has(*[data-list-item-id*="shop"]),
+li.channel__0aef5.container__3792d:has(*[data-list-item-id*="shop"]) {
+    display:none!important;
 }

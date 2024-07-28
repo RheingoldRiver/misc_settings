@@ -260,3 +260,7 @@ button[aria-label="Send a gift"] {
 li.channel__0aef5.container__3792d:has(*[data-list-item-id*="shop"]) {
     display:none!important;
 }
+
+.bottom_eba0ba:has(.unreadIcon_eba0ba) {
+    display:none;
+}

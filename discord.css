@@ -250,17 +250,18 @@ article {
     max-width:100%!important;
 }
 
+.channel_c91bad.container_d91ad9:has(*[data-list-item-id*="shop"]),
 button[aria-label="Send a gift"] + div,
 button[aria-label="Send a gift"] + div + div,
 button[aria-label="Send a gift"] {
     display:none;
 }
 
-.container_b15955:has(*[data-list-item-id*="shop"]),
 li.channel__0aef5.container__3792d:has(*[data-list-item-id*="shop"]) {
     display:none!important;
 }
 
+.top_eba0ba:has(.unreadIcon_eba0ba),
 .bottom_eba0ba:has(.unreadIcon_eba0ba) {
     display:none;
 }

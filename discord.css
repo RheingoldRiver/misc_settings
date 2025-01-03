@@ -271,7 +271,18 @@ li.channel__0aef5.container__3792d:has(*[data-list-item-id*="shop"]) {
     display:none!important;
 }
 
+.footer_d71945,
 .channelAppLauncher_df39bd,
 .expression-picker-chat-input-button.buttonContainer_bdf0de:not(:has([aria-label*=emoji])) {
     display:none!important;
+}
+
+.obscuredTextContentInner_aa9639[aria-hidden="false"] blockquote::before {
+    content:unset;
+}
+
+.obscuredTextContentInner_aa9639[aria-hidden="false"] blockquote {
+    border-top:4px dotted #6A6483;
+    border-bottom:4px dotted #6A6483;
+    border-right:4px dotted #6A6483;
 }

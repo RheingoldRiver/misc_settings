@@ -208,9 +208,9 @@ article.embedWrapper_c143d9.embedFull__8dc21.embed_d3cbe3.markup_a7e664.justifyA
     display:none;
 }
 
-/* scale up chat a bit 
-.username_d30d99,
-.markup_a7e664 {
+/* scale up chat a bit */
+.messageContent_c19a55,
+.header_c19a55 {
     font-size:1.1rem;
 }
 
@@ -225,8 +225,9 @@ article.embedWrapper_c143d9.embedFull__8dc21.embed_d3cbe3.markup_a7e664.justifyA
 .markup_f8f345,
 .messageContent_f9f2ca,
 .textArea__74543,
-.username_d30d99,
-.markup_a7e664 {
+.editor__1b31f,
+.messageContent_c19a55,
+.header_c19a55 {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size:1.1rem;
     line-height:1.475rem;
@@ -271,6 +272,8 @@ li.channel__0aef5.container__3792d:has(*[data-list-item-id*="shop"]) {
     display:none!important;
 }
 
+.channelAppLauncher_e6e74f,
+.footer__214dc,
 .footer_d71945,
 .channelAppLauncher_df39bd,
 .expression-picker-chat-input-button.buttonContainer_bdf0de:not(:has([aria-label*=emoji])) {
@@ -285,4 +288,9 @@ li.channel__0aef5.container__3792d:has(*[data-list-item-id*="shop"]) {
     border-top:4px dotted #6A6483;
     border-bottom:4px dotted #6A6483;
     border-right:4px dotted #6A6483;
+}
+
+/* reduced motion fix */
+.messageListItem_d5deea:hover {
+    background-color:rgba(12,12,12,0.35);
 }

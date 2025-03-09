@@ -74,9 +74,14 @@
 /*
 The button about the message actions */
 
+.compact_c19a55.wrapper_c19a55,
 .message__80c10.wrapper__09ecc.compact__54ecc.zalgo__39311 {
-    padding-top:0!important;
-    padding-bottom:0!important;
+    padding-top:0.1rem!important;
+    padding-bottom:0.1rem!important;
+}
+
+.timestamp_c19a55 {
+    white-space: nowrap;
 }
 
 /* fix spacing around day change */
@@ -272,6 +277,9 @@ li.channel__0aef5.container__3792d:has(*[data-list-item-id*="shop"]) {
     display:none!important;
 }
 
+.channel__972a0:has([href="/store"]),
+.channel__972a0:has([href="/shop"]),
+.top__7aaec,
 .bottom__7aaec,
 .channelAppLauncher_e6e74f,
 .footer__214dc,
@@ -294,4 +302,38 @@ li.channel__0aef5.container__3792d:has(*[data-list-item-id*="shop"]) {
 /* reduced motion fix */
 .messageListItem_d5deea:hover {
     background-color:rgba(12,12,12,0.35);
+}
+
+/* images */
+
+/* .carouselModal_d3a6f0 {
+    grid-template-rows: auto auto;
+}
+
+.carouselModal_d3a6f0 .wrapper__44b0c,
+.carouselModal_d3a6f0 .author__6088c {
+    display: none;
+}
+
+.topBar__6088c {
+    order: 1;
+    grid-row: 2;
+    display: flex!important;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+} */
+
+
+.form_f75fb0:has(.channelTextAreaDisabled__74017) {
+  border-top: 2px solid var(--app-border-frame);
+  height: 50px;
+  background-color: var(--background-primary);
+  cursor:not-allowed;
+  .channelTextAreaDisabled__74017.channelTextAreaDisabled__74017 {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    .rightAccessories__74017, .buttons__74017 {display: none;}
+  }
 }

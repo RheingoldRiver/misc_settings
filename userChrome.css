@@ -151,7 +151,6 @@ width: 100%;
 #main-menubar{
   margin-left:158px!important;
   pointer-events: auto;
-  padding-top: 2px;
 }
 #nav-bar-customization-target > toolbaritem:nth-of-type(3) {margin-right:150px!important} /* change this if adding or removing menu bar items */
 /* End move URL bar */
@@ -314,6 +313,18 @@ width: 100%;
   color:#9F9F9F;
 }
 
+/* Make urlbar megabar appear more compact */
+/* Set the pref browser.urlbar.megabar to true 
+#urlbar-container{
+  margin-inline-start: 0px !important;
+  width: calc(100% - 400px) !important;
+  left: 0 !important;
+  top: calc((var(--urlbar-container-height) - var(--urlbar-height)) / 2) !important;
+  position:absolute!important;
+}
+#urlbar[breakout]:not([open]){ bottom: calc((var(--urlbar-container-height) - var(--urlbar-height)) / 2) !important; }*/
+
+.urlbarView{ margin-inline: 0 !important; width: auto !important; }
 .urlbarView-row{ padding: 2px 7px !important; }
 .urlbarView-row-inner{ padding: 0 !important; }
 #urlbar-background{ animation: none !important; }
@@ -337,6 +348,11 @@ width: 100%;
 .urlbarView.megabar .urlbarView-type-icon {
   height:15px!important;
   width:15px!important;
+}
+
+#personal-bookmarks {
+  width:400px!important;
+  min-width:unset!important;
 }
 
 /*  Show kw Field & URL(Location) Field  */
@@ -394,3 +410,8 @@ menupopup > menu {
 #ContentSelectDropdown > menupopup {
   --content-select-background-image:unset!important;
 }
+
+  #nav-bar:is([downloadsbuttonshown], [unifiedextensionsbuttonshown]) {
+    width: calc(310px + 24px + 2 * var(--toolbarbutton-inner-padding));
+    max-width:80%;
+  }

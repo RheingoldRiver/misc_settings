@@ -3,83 +3,6 @@
 
 /* If you are going to open Library in the (places.xhtml) in a tab then this file should also be imported in userContent.css */
 
-/* Source: https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/dark_additional_windows.css */
-
-@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-@-moz-document url-prefix(chrome://browser/content/places/),
-  url(chrome://global/content/commonDialog.xhtml),
-  url-prefix(chrome://browser/content/pageinfo/),
-  url-prefix("chrome://mozapps/content/downloads"){
-  
-  #placesToolbox,
-  #placesView,
-  #placesToolbar,
-  #main-window,
-  #topBar,
-  dialog,
-  tree{
-    -moz-appearance: none !important;
-    background-color: rgb(50,50,52) !important;
-    color: rgb(249,249,250) !important;
-  }
-    
-  #placesToolbar,
-  tree{
-    background: transparent !important;
-  }
-  search-textbox,
-  #searchFilter,
-
-  input,  
-  textbox,
-  richlistbox,
-  treecol,
-  button,
-  menu,
-  #permList{
-    -moz-appearance: none !important;
-    color: inherit !important;
-  }
-  
-    
-  .menubar-left{ fill: currentColor; -moz-context-properties: fill; }
-  
-  #searchFilter,search-textbox,input,textbox,richlistbox{ background-color: rgba(0,0,0,0.2) !important; }
-  search-textbox > input,#searchFilter > input,input[readonly]{ background-color: transparent !important; }
-    
-  treecol:not([hideheader]){ height: 24px; }
-  treecol:hover{ filter: brightness(160%) }
-  treechildren::-moz-tree-row(multicol, odd), #permList{ background-color: rgba(0,0,0,0.2) !important; }
-  
-  radiogroup > radio[selected],
-  radiogroup > radio:hover,
-  #permList > .permission:hover,
-  treechildren::-moz-tree-row(hover),
-  button:hover{ background-color: rgba(255,255,255,0.1) !important; color: inherit !important;}
-  
-  treechildren::-moz-tree-row(selected){ background-color: Highlight !important; }
-  button{ padding: 3px }
-  #placesMenu > menu{ border: none !important; }
-    
-  search-textbox,input,button{ border: 1px solid graytext; border-radius: 3px }
-  search-textbox,input{ padding: 2px }
-
-}
-
-/* modal prompts (alert() & friends) */
-
-xul|vbox.paymentDialogContainerFrame,
-xul|vbox.tabmodalprompt-mainContainer{
-  background-color: var(--toolbar-bgcolor) !important;
-  color: var(--lwt-text-color,-moz-dialogtext) !important;
-}
-
-/*********************************************/
-/* Source: https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/dark_additional_windows.css */
-/* End */
-/*********************************************/
-
 /* Dark scrollbars */
 
 toolbarbutton#alltabs-button {
@@ -109,51 +32,27 @@ treechildren.searchbar-treebody::-moz-tree-row(selected) {
 }
 /* End change highlight color of url dropdown */
 
-/* Move URL bar */
-#TabsToolbar{
-  order: 1 !important;
+#navigator-toolbox {
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
-#urlbar{margin: 0 5px !important;}
-#nav-bar{
-	--toolbarbutton-inner-padding: 4px;
-	order:0 !important;
-	  z-index:10!important;
-	  background-color:unset!important;
-  position:relative;
-  	pointer-events:none;
-  
+.browser-toolbar {
+  grid-column: 1/3;
 }
-#nav-bar-customization-target > *,
-#customizationui-widget-panel,
-#customizationui-widget-panel * {
-	pointer-events:initial;
+#nav-bar {
+  grid-column: 2/3;
+  width:100%!important;
+}
+#PersonalToolbar {
+  grid-column: 3/3;
+}
+#TabsToolbar {
+  order: 1;
 }
 
-#titlebar{
-order: 2;
--moz-appearance: none !important;
---tabs-navbar-shadow-size: 0px;
+#urlbar-container {
+  width: calc(310px + 24px + 2 * var(--toolbarbutton-inner-padding));
 }
-
-:root{ --uc-window-control-width: 0px !important }
-
-#toolbar-menubar{
-position: fixed;
-display: flex;
-top: var(--uc-titlebar-padding,0px);
-height: 29px!important;
-  padding-top:5px!important;
-width: 100%;
-	pointer-events: none;
-}
-
-/* Update this if changing menus or bookmarks (increase the number if adding things)!!!! keyword */
-#main-menubar{
-  margin-left:158px!important;
-  pointer-events: auto;
-}
-#nav-bar-customization-target > toolbaritem:nth-of-type(3) {margin-right:150px!important} /* change this if adding or removing menu bar items */
-/* End move URL bar */
 
 /* Change back/forward icons */
 #back-button > .toolbarbutton-icon{ list-style-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath fill='%239f9f9f' d='M12.54 13.188 3.46 8l9.08-5.188v10.376z'/%3E%3C/svg%3E");}
@@ -197,15 +96,7 @@ width: 100%;
 /* Constrains urlbar popup to urlbar width */
 /* Firefox 70+ */
 
-#urlbar-container{
-	transform: translateY(0);
-	position: relative;
-	z-index: 10;
-	padding-block: 3px !important;
-  padding-inline: 0px !important;
-  margin-right: 5px !important;
-  margin-left: 0px !important;
-}
+
 #nav-bar-customization-target{ overflow: visible !important }
 #urlbar-results{ max-width: 100% !important; }
 .urlbarView{
@@ -221,11 +112,6 @@ width: 100%;
 
 /* Pink highlight */
 ::-moz-selection { background:#FF00FF!important;color:white!important; }
-
-/* focused tab - https://puu.sh/AivDe.png */
-#tabbrowser-tabs {
-	background-color:black;
-}
 
 .tab-content {
 	background-color:#282828;
@@ -253,8 +139,6 @@ width: 100%;
 .tab-label-container[textoverflow]:not([pinned]) {
   mask-image: unset !important;
 }
-
-#alltabs-button { display:none!important }
 
 /* find bar */
 .findbar-container { 
@@ -295,6 +179,7 @@ width: 100%;
 	overflow:hidden;
 }
 
+#alltabs-button,
 #unified-extensions-button,
 #firefox-view-button,
 #fxa-toolbar-menu-button,
@@ -314,16 +199,6 @@ width: 100%;
 }
 
 /* Make urlbar megabar appear more compact */
-/* Set the pref browser.urlbar.megabar to true 
-#urlbar-container{
-  margin-inline-start: 0px !important;
-  width: calc(100% - 400px) !important;
-  left: 0 !important;
-  top: calc((var(--urlbar-container-height) - var(--urlbar-height)) / 2) !important;
-  position:absolute!important;
-}
-#urlbar[breakout]:not([open]){ bottom: calc((var(--urlbar-container-height) - var(--urlbar-height)) / 2) !important; }*/
-
 .urlbarView{ margin-inline: 0 !important; width: auto !important; }
 .urlbarView-row{ padding: 2px 7px !important; }
 .urlbarView-row-inner{ padding: 0 !important; }
@@ -343,16 +218,6 @@ width: 100%;
 
 .urlbarView-row[row-selectable]:not([selected]):hover {
   background-color: #21252B;
-}
-
-.urlbarView.megabar .urlbarView-type-icon {
-  height:15px!important;
-  width:15px!important;
-}
-
-#personal-bookmarks {
-  width:400px!important;
-  min-width:unset!important;
 }
 
 /*  Show kw Field & URL(Location) Field  */
@@ -410,8 +275,3 @@ menupopup > menu {
 #ContentSelectDropdown > menupopup {
   --content-select-background-image:unset!important;
 }
-
-  #nav-bar:is([downloadsbuttonshown], [unifiedextensionsbuttonshown]) {
-    width: calc(310px + 24px + 2 * var(--toolbarbutton-inner-padding));
-    max-width:80%;
-  }

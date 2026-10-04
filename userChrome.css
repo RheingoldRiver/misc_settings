@@ -149,11 +149,10 @@ width: 100%;
 
 /* Update this if changing menus or bookmarks (increase the number if adding things)!!!! keyword */
 #main-menubar{
-  margin-left:158px!important;
+  margin-left:169px!important;
   pointer-events: auto;
-  padding-top: 2px;
 }
-#nav-bar-customization-target > toolbaritem:nth-of-type(3) {margin-right:150px!important} /* change this if adding or removing menu bar items */
+#nav-bar-customization-target > toolbaritem:nth-of-type(3) {margin-right:195px!important} /* change this if adding or removing menu bar items */
 /* End move URL bar */
 
 /* Change back/forward icons */
@@ -191,7 +190,7 @@ width: 100%;
 #pocket-button-box, #pageActionSeparator, #pageActionButton, #star-button-box {display:none!important;}
 
 #urlbar { 
-  background-color: #444444!important;
+  background-color: #121212;
   color: #A4A4A4!important;
 }
 
@@ -210,7 +209,6 @@ width: 100%;
 #nav-bar-customization-target{ overflow: visible !important }
 #urlbar-results{ max-width: 100% !important; }
 .urlbarView{
-  top: calc(100% - 5px) !important;
   width: 100%;
   border-width: 0 1px 1px 1px !important;;
   border-style: solid;
@@ -296,7 +294,7 @@ width: 100%;
 	overflow:hidden;
 }
 
-#unified-extensions-button,
+#sidebar-button,
 #firefox-view-button,
 #fxa-toolbar-menu-button,
 #context-savelinktopocket,
@@ -306,7 +304,7 @@ width: 100%;
 }
 
 #urlbar-background {
-  background-color:#444444!important;
+  background-color: #444444 !important;
 }
 
 #urlbar-results {
@@ -393,4 +391,23 @@ menupopup > menu {
 
 #ContentSelectDropdown > menupopup {
   --content-select-background-image:unset!important;
+}
+
+.urlbarView-row[dynamicType="actions"] {
+  display:none!important;
+}
+
+#back-button,
+#forward-button,
+#reload-button,
+#stop-button {
+    padding-inline: 0 !important;
+    margin-inline: 0 !important;
+}
+
+#back-button > .toolbarbutton-icon,
+#forward-button > .toolbarbutton-icon,
+#reload-button > .toolbarbutton-icon,
+#stop-button > .toolbarbutton-icon {
+    margin-inline: 0 !important;
 }

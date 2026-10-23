@@ -152,7 +152,7 @@ width: 100%;
   margin-left:169px!important;
   pointer-events: auto;
 }
-#nav-bar-customization-target > toolbaritem:nth-of-type(3) {margin-right:195px!important} /* change this if adding or removing menu bar items */
+#nav-bar-customization-target > toolbaritem:nth-of-type(3) {margin-right:145px!important} /* change this if adding or removing menu bar items */
 /* End move URL bar */
 
 /* Change back/forward icons */
@@ -294,6 +294,7 @@ width: 100%;
 	overflow:hidden;
 }
 
+#profiles-menu,
 #sidebar-button,
 #firefox-view-button,
 #fxa-toolbar-menu-button,
@@ -410,4 +411,12 @@ menupopup > menu {
 #reload-button > .toolbarbutton-icon,
 #stop-button > .toolbarbutton-icon {
     margin-inline: 0 !important;
+}
+
+.urlbarView-favicon {
+  mask-image: unset !important;
+}
+
+.urlbarView-type-icon {
+  display:none!important;
 }
